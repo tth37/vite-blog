@@ -5,16 +5,18 @@
   import { ref, defineProps, watch, watchEffect } from 'vue'
   import { useConfigStore } from '../../stores/config'
   import axios from 'axios'
+  import { renderTimeAgo } from '../../utils/renderTimeAgo'
 
   const PAGE_URL = '/api/page/'
 
-  const loading = ref(true)
-  const page = ref([])
+  
   const props = defineProps({
     curPage: {
       default: 1,
     },
   })
+  const loading = ref(true)
+  const page = ref([])
   const config = useConfigStore()
 
   watchEffect(async () => {
@@ -26,23 +28,19 @@
 </script>
 
 <template>
-  <div v-if="loading">
-    <Widget v-for="_ in config.postsPerPage">
+    <Widget v-if="loading" v-for="_ in config.postsPerPage">
       <Skeleton />
     </Widget>
-  </div>
-  <div v-else>
-    <Widget v-for="post in page">
-      <h5
-        class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+    <Widget v-else v-for="post in page">
+      <router-link :to="'/post/' + post.id"
+        class="mb-2 text-xl font-bold text-gray-900 dark:text-white"
       >
         {{ post.title }}
-      </h5>
+      </router-link>
 
       <p>{{ post.abstract }}</p>
-      <p>{{ post.date }}</p>
+      <p>{{ renderTimeAgo(post.date) }}</p>
     </Widget>
-  </div>
   <Widget>
     <Pagination :curPage="props.curPage" :totPage="config.totPage" />
   </Widget>

@@ -28,8 +28,11 @@ const API_DIR = './public/api/'
 
 const files = fs.readdirSync(POST_DIR)
 
-const postFiles = files.filter((file) => file.endsWith('.md'))
+const postFiles = files.filter((file) => {
+  return file.endsWith('.md') && !file.endsWith('about.md')
+})
 const configFile = files.filter((file) => file.endsWith('.yml'))
+const aboutFiles = files.filter((file) => file.endsWith('about.md'))
 
 // ensure post file names are valid
 postFiles.forEach((file) => {
@@ -59,6 +62,14 @@ let posts = postFiles.map((file) => {
       ...content.attributes,
       id: file.split('.')[0],
     },
+    content: content.body,
+  }
+})
+
+const about = aboutFiles.map((file) => {
+  const data = fs.readFileSync(POST_DIR + file, 'utf8')
+  const content = fm(data)
+  return {
     content: content.body,
   }
 })
@@ -94,4 +105,9 @@ pages.forEach((page, index) => {
 // API_DIR/post/*
 posts.forEach((post) => {
   fs.writeFileSync(API_DIR + `post/${post.meta.id}`, JSON.stringify(post))
+})
+
+// API_DIR/about
+about.forEach((about) => {
+  fs.writeFileSync(API_DIR + 'about', JSON.stringify(about))
 })

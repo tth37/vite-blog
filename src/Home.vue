@@ -1,20 +1,21 @@
 <script setup>
   import Layout from './components/Layout.vue'
-  import Abstract from './components/widgets/Abstract.vue'
+  import WidgetAbout from './components/widgets/WidgetAbout.vue'
+  import WidgetAbstract from './components/widgets/WidgetAbstract.vue'
   import WidgetSidebar from './components/widgets/WidgetSidebar.vue'
   import { defineProps } from 'vue'
 
   const { curPage } = defineProps({
     curPage: {
-      default: 1
-    }
+      default: 1,
+    },
   })
 </script>
 
 <template>
-  {{ curPage }}
   <Layout>
     <template #sidebar>
+      <WidgetAbout />
       <WidgetSidebar>
         <template #title> About </template>
         Hello, my name is tth37.
@@ -25,6 +26,6 @@
       </WidgetSidebar>
     </template>
 
-    <Abstract :cur-page="curPage"></Abstract>
+    <WidgetAbstract :cur-page="curPage"></WidgetAbstract>
   </Layout>
 </template>
