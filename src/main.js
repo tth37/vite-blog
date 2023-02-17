@@ -23,6 +23,7 @@ app.use(router)
 app.use(pinia)
 
 const config = useConfigStore()
-await config.init()
+config.init().then(() => {
+  app.mount('#app')
+})
 
-app.mount('#app')
