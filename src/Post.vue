@@ -2,7 +2,7 @@
   import Layout from './components/Layout.vue'
   import WidgetAbout from './components/widgets/WidgetAbout.vue'
   import { defineProps } from 'vue'
-import WidgetPost from './components/widgets/WidgetPost.vue';
+  import WidgetPost from './components/widgets/WidgetPost.vue'
 
   const { id } = defineProps({
     id: {

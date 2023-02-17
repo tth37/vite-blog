@@ -32,7 +32,7 @@
       <Skeleton/>
     </div>
     <div v-else>
-      <div class="prose markdown-body max-w-3xl"
+      <div class="prose markdown-body max-w-3xl overflow-x-auto"
           v-html="post.content"></div>
     </div>
   </Widget>

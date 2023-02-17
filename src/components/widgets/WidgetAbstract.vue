@@ -33,7 +33,7 @@
     </Widget>
     <Widget v-else v-for="post in page">
       <router-link :to="'/post/' + post.id"
-        class="mb-2 text-xl font-bold text-gray-900 dark:text-white"
+        class="block mb-2 text-2xl font-bold text-gray-900 dark:text-white"
       >
         {{ post.title }}
       </router-link>
