@@ -35,7 +35,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
       - name: Build with Vite
-        run: yarn build
+        run: yarn build:api && yarn build:vite
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
