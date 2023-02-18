@@ -75,6 +75,12 @@ $u_{xx}+u_{yy}=0$
 
 设函数 $f(z)$ 在圆域 $K=\{z|\left|z-z_0\right|<R\}$ 内解析，则在 $K$ 内 $f(z)$ 能唯一地展开成 $f(z)=\sum_{n=0}^{\infty}c_n(z-z_0)^n$
 
-### 复变初等函数的泰勒展开
+### 复变初等函数的泰勒级数
 
+$e^z=1+z+\dfrac{z^2}{2!}+\dfrac{z^3}{3!}+\cdots+\dfrac{z^n}{n!}+\cdots,R=\infty$
 
+$\sin z=z-\dfrac{z^3}{3!}+\dfrac{z^5}{5!}-\cdots+\dfrac{(-1)^n}{(2n+1)!}z^{2n+1}+\cdots,R=\infty$
+
+$\cos z=1-\dfrac{z^2}{2!}+\dfrac{z^4}{4!}-\cdots+\dfrac{(-1)^n}{(2n)!}z^{2n}+\cdots,R=\infty$
+
+$\ln(1+z)=z-\dfrac{z^2}{2}+\dfrac{z^3}{3}-\cdots+\dfrac{(-1)^n}{n+1}z^{n+1}+\cdots,R=\infty$

@@ -1,41 +1,35 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import { createPinia } from 'pinia'
-import Home from './Home.vue'
-import App from './App.vue'
 import { useConfigStore } from './stores/config'
 import { useScrollStore } from './stores/scroll'
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faLocationDot, faUserSecret } from '@fortawesome/free-solid-svg-icons'
-
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import App from './App.vue'
 import './index.css'
 import 'katex/dist/katex.min.css';
 import 'highlight.js/styles/github.css';
 import 'github-markdown-css/github-markdown-light.css';
 
-
-library.add(faLocationDot)
-
-
-
-const pinia = createPinia()
-
+// Create Vue.js Application
 const app = createApp(App)
 
+// Create Pinia Store
+const pinia = createPinia()
 app.use(pinia)
+
+// Initialize Font Awesome Icons
+library.add(faLocationDot)
 app.component('font-awesome-icon', FontAwesomeIcon)
 
-const config = useConfigStore()
+// Create Vue.js Router
 const scroll = useScrollStore()
-
 const routes = [
-  { path: '/', component: Home },
-  { path: '/page/:curPage', component: Home, props: true },
+  { path: '/', component: () => import('./Home.vue') },
+  { path: '/page/:curPage', component: () => import('./Home.vue'), props: true },
   { path: '/post/:id', component: () => import('./Post.vue'), props: true },
 ]
-
 const router = createRouter({
   history: createWebHistory(),
   routes,
@@ -43,9 +37,10 @@ const router = createRouter({
     scroll.setPosition(savedPosition)
   }
 })
-
 app.use(router)
 
+// Bootstrap after config is loaded
+const config = useConfigStore()
 config.init().then(() => {
   app.mount('#app')
 })
