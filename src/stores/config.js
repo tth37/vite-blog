@@ -1,9 +1,9 @@
-import { defineStore } from 'pinia'
-import axios from 'axios'
+import { defineStore } from "pinia"
+import axios from "axios"
 
-const CONFIG_URL = '/api/config'
+const CONFIG_URL = "/api/config"
 
-export const useConfigStore = defineStore('config', {
+export const useConfigStore = defineStore("config", {
     state: () => ({
         postsPerPage: 0,
         totPage: 0,

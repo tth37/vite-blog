@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  theme: {
-    fontFamily: {
-      sans: ['Lato', 'sans-serif'],
+    content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+    theme: {
+        fontFamily: {
+            sans: ["Lato", "sans-serif"],
+        },
+        container: {
+            center: true,
+        },
+        extend: {},
     },
-    container: {
-      center: true,
-    },
-    extend: {},
-  },
-  plugins: [require('flowbite/plugin')],
+    plugins: [require("flowbite/plugin")],
 }

@@ -1,6 +1,6 @@
-import { useScrollStore } from "../stores/scroll";
+import { useScrollStore } from "../stores/scroll"
 
-const scrollStore = useScrollStore();
+const scrollStore = useScrollStore()
 
 export function scroll() {
     setTimeout(() => {

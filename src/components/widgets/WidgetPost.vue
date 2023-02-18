@@ -1,32 +1,32 @@
 <script setup>
-  import Widget from './Widget.vue'
-  import { ref, watchEffect } from 'vue'
-  import Skeleton from './components/Skeleton.vue'
-  import axios from 'axios'
-  import { scroll } from '../../utils/scroll'
+import Widget from "./Widget.vue"
+import { ref, watchEffect } from "vue"
+import Skeleton from "./components/Skeleton.vue"
+import axios from "axios"
+import { scroll } from "../../utils/scroll"
 
-  const props = defineProps({
+const props = defineProps({
     id: {
-      type: String,
-      required: true,
+        type: String,
+        required: true,
     },
-  })
-  const loading = ref(true)
-  const post = ref({})
+})
+const loading = ref(true)
+const post = ref({})
 
 
-  watchEffect(async () => {
+watchEffect(async () => {
     loading.value = true
-    const res = await axios.get('/api/post/' + props.id)
+    const res = await axios.get("/api/post/" + props.id)
     post.value = {
-      ...res.data,
-      content: await import('../../utils/renderMd.js').then((module) =>
-        module.renderMd(res.data.content)
-      ),
+        ...res.data,
+        content: await import("../../utils/renderMd.js").then((module) =>
+            module.renderMd(res.data.content)
+        ),
     }
     loading.value = false
     scroll()
-  })
+})
 </script>
 
 <template>

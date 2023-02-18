@@ -18,7 +18,8 @@
     "new": "node ./scripts/create-post.js",
     "build:api": "node ./scripts/build-api.js",
     "build:vite": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint --ext .js,.ts,.vue,.cjs,.json . --fix"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
@@ -41,11 +42,14 @@
     "@types/marked": "^4.0.8",
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
+    "eslint": "^8.34.0",
+    "eslint-plugin-vue": "^9.9.0",
     "front-matter": "^4.0.2",
     "js-yaml": "^4.1.0",
     "npm-watch": "^0.11.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.6",
-    "vite": "^4.1.0"
+    "vite": "^4.1.0",
+    "vite-plugin-eslint": "^1.8.1"
   }
 }

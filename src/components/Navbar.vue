@@ -1,10 +1,10 @@
 <script setup>
-  import { onMounted } from 'vue'
-  import { initCollapses } from 'flowbite'
+import { onMounted } from "vue"
+import { initCollapses } from "flowbite"
 
-  onMounted(() => {
+onMounted(() => {
     initCollapses()
-  })
+})
 </script>
 
 <template>
