@@ -3,6 +3,7 @@
   import { ref, watchEffect } from 'vue'
   import Skeleton from './components/Skeleton.vue'
   import axios from 'axios'
+  import { scroll } from '../../utils/scroll'
 
   const props = defineProps({
     id: {
@@ -13,15 +14,18 @@
   const loading = ref(true)
   const post = ref({})
 
+
   watchEffect(async () => {
     loading.value = true
     const res = await axios.get('/api/post/' + props.id)
     post.value = {
       ...res.data,
-      content: await import('../../utils/renderMd.js').then(
-        (module) => module.renderMd(res.data.content)),
+      content: await import('../../utils/renderMd.js').then((module) =>
+        module.renderMd(res.data.content)
+      ),
     }
     loading.value = false
+    scroll()
   })
 </script>
 

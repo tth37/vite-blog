@@ -63,3 +63,18 @@ $u_{xx}+u_{yy}=0$
 
 ## 复变函数项级数
 
+### 复数项级数
+
+复数项级数 $\sum_{n=1}^{\infty}\alpha_n(\alpha_n=a_n+ib_n)$ 收敛的充要条件为实数项级数 $\sum_{n=1}^{\infty}a_n$ 与 $\sum_{n=1}^{\infty}b_n$ 均收敛
+
+### 幂级数收敛半径
+
+如果幂级数满足 $\lim_{n\to\infty}\left|\dfrac{c_{n+1}}{c_n}\right|=\lambda \neq 0$ 或 $\lim_{n\to\infty}\left|\sqrt[n]{c_{n}}\right|=\lambda \neq 0$，那么收敛半径 $R=\dfrac{1}{\lambda}$
+
+### 泰勒展开定理
+
+设函数 $f(z)$ 在圆域 $K=\{z|\left|z-z_0\right|<R\}$ 内解析，则在 $K$ 内 $f(z)$ 能唯一地展开成 $f(z)=\sum_{n=0}^{\infty}c_n(z-z_0)^n$
+
+### 复变初等函数的泰勒展开
+
+

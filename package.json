@@ -3,8 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "watch": {
+    "dev": {
+      "patterns": [
+        "posts"
+      ],
+      "extensions": "md,yml"
+    }
+  },
   "scripts": {
-    "dev": "vite",
+    "dev": "yarn build:api && vite",
+    "watch": "npm-watch",
+    "w": "npm-watch",
     "new": "node ./scripts/create-post.js",
     "build:api": "node ./scripts/build-api.js",
     "build:vite": "vite build",
@@ -32,6 +42,7 @@
     "autoprefixer": "^10.4.13",
     "front-matter": "^4.0.2",
     "js-yaml": "^4.1.0",
+    "npm-watch": "^0.11.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.6",
     "vite": "^4.1.0"
