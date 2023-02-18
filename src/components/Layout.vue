@@ -6,7 +6,7 @@ import Navbar from "./Navbar.vue"
 <template>
   <!-- Body -->
   <div
-    class="flex flex-col justify-between bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen"
+    class="flex flex-col justify-between bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen"
   >
     <!-- Navbar & Page -->
     <div>

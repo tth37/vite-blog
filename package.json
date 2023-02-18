@@ -43,6 +43,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-vue": "^9.9.0",
     "front-matter": "^4.0.2",
     "js-yaml": "^4.1.0",

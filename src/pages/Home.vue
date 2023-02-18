@@ -1,9 +1,11 @@
 <script setup>
 import Layout from "../components/Layout.vue"
-import WidgetAbout from "../components/widgets/WidgetAbout.vue"
+import WidgetAvatar from "../components/widgets/WidgetAvatar.vue"
 import WidgetAbstract from "../components/widgets/WidgetAbstract.vue"
-import WidgetSidebar from "../components/widgets/WidgetSidebar.vue"
-import { defineProps } from "vue"
+import WidgetBreadCrumb from "../components/widgets/WidgetBreadCrumb.vue";
+import WidgetCategories from "../components/widgets/WidgetCategories.vue";
+import WidgetTags from "../components/widgets/WidgetTags.vue";
+import WidgetAbout from "../components/widgets/WidgetAbout.vue";
 
 const props = defineProps({
     curPage: {
@@ -15,17 +17,13 @@ const props = defineProps({
 <template>
   <Layout>
     <template #sidebar>
+      <WidgetAvatar />
       <WidgetAbout />
-      <WidgetSidebar>
-        <template #title> About </template>
-        Hello, my name is tth37.
-      </WidgetSidebar>
-      <WidgetSidebar>
-        <template #title> Contact </template>
-        GitHub
-      </WidgetSidebar>
+      <WidgetCategories class="hidden md:block" />
+      <WidgetTags class="hidden md:block" />
     </template>
 
+    <WidgetBreadCrumb :bread-crumb="[]" />
     <WidgetAbstract :cur-page="props.curPage"></WidgetAbstract>
   </Layout>
 </template>

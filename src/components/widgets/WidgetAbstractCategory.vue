@@ -8,12 +8,15 @@ import axios from "axios"
 import { scroll } from "../../utils/scroll"
 import Meta from "./components/Meta.vue"
 
-const PAGE_URL = "/api/page/"
+const CATEGORYPAGE_URL = "/api/category/"
 
 const props = defineProps({
     curPage: {
         default: 1,
     },
+    category: {
+        required: true,
+    }
 })
 const loading = ref(true)
 const page = ref([])
@@ -21,7 +24,7 @@ const config = useConfigStore()
 
 watchEffect(async () => {
     loading.value = true
-    const res = await axios.get(PAGE_URL + props.curPage)
+    const res = await axios.get(CATEGORYPAGE_URL + props.category + "/" + props.curPage)
     page.value = res.data
     loading.value = false
     scroll()
@@ -44,6 +47,6 @@ watchEffect(async () => {
     <Meta :meta="post.meta" />
   </Widget>
   <Widget>
-    <Pagination :curPage="props.curPage" :totPage="config.totPage" />
+    <Pagination :curPage="props.curPage" :totPage="config.categoryTotPage[props.category]" :base="`/category/${props.category}`" />
   </Widget>
 </template>

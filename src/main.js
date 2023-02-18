@@ -5,7 +5,7 @@ import { useConfigStore } from "./stores/config"
 import { useScrollStore } from "./stores/scroll"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons"
+import { faClock, faFolderOpen, faLocationDot, faTag } from "@fortawesome/free-solid-svg-icons"
 import App from "./App.vue"
 import "./index.css"
 import "katex/dist/katex.min.css"
@@ -20,7 +20,7 @@ const pinia = createPinia()
 app.use(pinia)
 
 // Initialize Font Awesome Icons
-library.add(faLocationDot)
+library.add([faLocationDot, faClock, faFolderOpen, faTag])
 app.component("font-awesome-icon", FontAwesomeIcon)
 
 // Create Vue.js Router
@@ -29,6 +29,13 @@ const routes = [
     { path: "/", component: () => import("./pages/Home.vue") },
     { path: "/page/:curPage", component: () => import("./pages/Home.vue"), props: true },
     { path: "/post/:id", component: () => import("./pages/Post.vue"), props: true },
+    { path: "/tags", component: () => import("./pages/Tags.vue") },
+    { path: "/tag/:tag", component: () => import("./pages/Tag.vue"), props: true },
+    { path: "/tag/:tag/page/:curPage", component: () => import("./pages/Tag.vue"), props: true },
+    { path: "/categories", component: () => import("./pages/Categories.vue") },
+    { path: "/category/:category", component: () => import("./pages/Category.vue"), props: true },
+    { path: "/category/:category/page/:curPage", component: () => import("./pages/Category.vue"), props: true },
+    { path: "/about", component: () => import("./pages/About.vue") },
 ]
 const router = createRouter({
     history: createWebHistory(),

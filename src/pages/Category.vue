@@ -4,14 +4,17 @@ import WidgetAvatar from "../components/widgets/WidgetAvatar.vue"
 import WidgetAbout from "../components/widgets/WidgetAbout.vue";
 import WidgetCategories from "../components/widgets/WidgetCategories.vue";
 import WidgetTags from "../components/widgets/WidgetTags.vue";
+import WidgetAbstractCategory from "../components/widgets/WidgetAbstractCategory.vue";
+
 import WidgetBreadCrumb from "../components/widgets/WidgetBreadCrumb.vue";
-import WidgetPost from "../components/widgets/WidgetPost.vue"
 
 const props = defineProps({
-    id: {
-        type: String,
-        required: true,
+    curPage: {
+        default: 1,
     },
+    category: {
+        required: true,
+    }
 })
 </script>
 
@@ -24,7 +27,8 @@ const props = defineProps({
       <WidgetTags class="hidden md:block" />
     </template>
 
-    <WidgetBreadCrumb :bread-crumb="[{name: props.id, to: '/post/' + props.id}]" />
-    <WidgetPost :id="props.id"></WidgetPost>
-  </Layout>
+    <WidgetBreadCrumb :bread-crumb="[{name: 'Categories', to: '/categories'}, {name: props.category, to: '/category/' + props.category}]" />
+    <WidgetAbstractCategory :cur-page="props.curPage" :category="props.category"></WidgetAbstractCategory>
+
+</Layout>
 </template>
