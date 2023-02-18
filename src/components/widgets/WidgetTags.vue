@@ -35,7 +35,7 @@ watchEffect(async () => {
       v-for="tag in tags"
       :key="tag"
       :to="`/tag/${tag}`"
-      class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400"
+      class="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400 whitespace-nowrap"
     >
       <font-awesome-icon icon="fa-solid fa-tag" class="mr-1" />
       {{ tag }}
