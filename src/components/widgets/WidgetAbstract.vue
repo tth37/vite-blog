@@ -2,7 +2,7 @@
   import Pagination from './components/Pagination.vue'
   import Skeleton from './components/Skeleton.vue'
   import Widget from './Widget.vue'
-  import { ref, defineProps, watch, watchEffect } from 'vue'
+  import { ref, defineProps, watchEffect } from 'vue'
   import { useConfigStore } from '../../stores/config'
   import axios from 'axios'
   import { renderTimeAgo } from '../../utils/renderTimeAgo'

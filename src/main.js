@@ -8,6 +8,7 @@ import { useConfigStore } from './stores/config'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faLocationDot, faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import 'katex/dist/katex.min.css';
 
 library.add(faLocationDot)
 

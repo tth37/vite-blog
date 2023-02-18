@@ -1,9 +1,8 @@
 <script setup>
   import Widget from './Widget.vue'
-  import { defineProps, ref, watchEffect } from 'vue'
+  import { ref, watchEffect } from 'vue'
   import Skeleton from './components/Skeleton.vue'
   import axios from 'axios'
-  // import { renderMd } from '../../utils/renderMd.js'
 
   const props = defineProps({
     id: {
@@ -33,7 +32,7 @@
     </div>
     <div v-else>
       <div
-        class="prose markdown-body max-w-3xl overflow-x-auto"
+        class="prose markdown-body max-w-3xl overflow-x-auto overflow-y-hidden"
         v-html="post.content"
       ></div>
     </div>

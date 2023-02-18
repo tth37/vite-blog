@@ -43,13 +43,13 @@ $\ch z=\dfrac{e^{z}+e^{-z}}{2},\sh z=\dfrac{e^{z}-e^{-z}}{2}$
 
 ### 柯西积分定理
 
-如果函数 $f(z)$ 在简单闭曲线 $C$ 上以及由它围成的区域 $D$ 内处处解析，那么 $f(z)$ 沿 $C$ 的积分为零，即 $\displaystyle\oint_C f(z)\textrm dz=0$
+如果函数 $f(z)$ 在简单闭曲线 $C$ 上以及由它围成的区域 $D$ 内处处解析，那么 $f(z)$ 沿 $C$ 的积分为零，即 $\oint_C f(z)\mathrm dz=0$
 
 ### 柯西积分公式（高阶导数公式）
 
-如果 $f(z)$ 在区域 $D$ 内处处解析，$C$ 为 $D$ 内的任何一条正向简单闭曲线，它的内部完全含于 $D$，$z_0$ 为 $C$ 内部的任一点，那么 $\displaystyle\oint_C\frac{f(z)}{z-z_0}\textrm dz=2\pi i f(z_0)$
+如果 $f(z)$ 在区域 $D$ 内处处解析，$C$ 为 $D$ 内的任何一条正向简单闭曲线，它的内部完全含于 $D$，$z_0$ 为 $C$ 内部的任一点，那么 $\oint_C\frac{f(z)}{z-z_0}\mathrm dz=2\pi i f(z_0)$
 
-- $\displaystyle\oint_C\frac{f(z)}{(z-z_0)^{n+1}}\mathrm dz=\frac{2\pi i}{n!}f^{(n)}(z_0)$
+- $\oint_C\frac{f(z)}{(z-z_0)^{n+1}}\mathrm dz=\frac{2\pi i}{n!}f^{(n)}(z_0)$
 
 ### 调和函数
 
@@ -58,3 +58,8 @@ $u_{xx}+u_{yy}=0$
 设 $u$ 为区域 $D$ 内给定的调和函数，如果区域 $D$ 内的另一个函数 $v$ 使 $u+vi$ 在 $D$ 构成解析函数，则称 $v$ 为 $u$ 的共轭调和函数，$u$ 和 $v$ 满足 C-R 方程
 
 解析函数 $f(z)=u+iv$ 的导数 $f'(z)$ 仍为解析函数，且有 $f'(z)=u_x+iv_x$
+
+解析函数用 $x,y$ 表示变为用 $z$ 表示的方法：令 $y=0$，将 $x$ 替换为 $z$
+
+## 复变函数项级数
+

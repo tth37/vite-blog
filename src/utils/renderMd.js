@@ -1,6 +1,6 @@
 import hljs from 'highlight.js'
 import md from 'markdown-it'
-import mk from 'markdown-it-katex'
+import mk from './markdown-it-katex'
 
 const renderer = md({
   html: true,
@@ -9,7 +9,10 @@ const renderer = md({
   highlight: function (str, lang) {
     return hljs.highlightAuto(str, [lang]).value
   },
-}).use(mk)
+}).use(mk, {
+  throwOnError: true,
+  errorColor: ' #cc0000',
+})
 
 export function renderMd(str) {
   return renderer.render(str)
