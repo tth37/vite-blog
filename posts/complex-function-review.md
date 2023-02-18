@@ -143,6 +143,8 @@ $\oint_C f(z)\mathrm dz=2\pi i\sum_{k=1}^n\text{Res}[f(z),z_k]$
 
 $\text{Res}[f(z),z_0]=\dfrac{1}{(m-1)!}\lim_{z\to z_0}\{(z-z_0)^mf(z)\}^{(m-1)}$
 
+$z_0$ 为 $f(z)=\dfrac{\varphi(z)}{\psi(z)}$ 的一级极点：$\text{Res}[f(z),z_0]=\dfrac{\varphi(z_0)}{\psi'(z_0)}$
+
 $\text{Res}[f(z),\infty]=-\text{Res}\left[f\left(\dfrac{1}{z}\right)\dfrac{1}{z^2},0\right]$
 
 $\text{Res}[f(z),\infty]+\sum_{k=1}^n\text{Res}[f(z),z_k]=0$
