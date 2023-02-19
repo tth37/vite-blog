@@ -4,7 +4,7 @@ const scrollStore = useScrollStore()
 
 export function scroll() {
     setTimeout(() => {
-        document.documentElement.scrollTo( {
+        window.scrollTo({
             duration: 300,
             ...scrollStore.position,
         })
