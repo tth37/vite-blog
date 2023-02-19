@@ -155,7 +155,7 @@ $\text{Res}[f(z),\infty]+\sum_{k=1}^n\text{Res}[f(z),z_k]=0$
 
 形如 $\int_0^{2\pi}R(\cos\theta,\sin\theta)\mathrm d\theta$ 的积分
 
-- 变量代换：$\cos\theta=\dfrac{z^2+1}{2z},\sin\theta=\dfrac{z^2-1}{2iz}$
+- 变量代换：$\cos\theta=\dfrac{z^2+1}{2z},\sin\theta=\dfrac{z^2-1}{2iz},\mathrm d\theta=\dfrac{\mathrm dz}{iz}$
 
 - 孤立奇点：单位圆周 $|z|=1$ 以内
 
