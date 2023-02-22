@@ -8,6 +8,62 @@ tags: [tag1, tag2]
 
 # 大学物理（下）期末复习
 
+## 11. 波动光学
+
+### 光的干涉
+
+光程的概念及光程差和相位差的关系
+
+> 折射率 $n$ 和几何路程 $L$ 的乘积被称为光程 $\Delta$。
+>
+> 从同一点光源发出的两相干光，它们的光程差 $\Delta$ 和相位差 $\Delta\varphi$ 的关系为
+>
+> $$
+> \Delta\varphi=2\pi\frac{\Delta}{\lambda}
+> $$
+
+反射光的相位跃变（半波损失）
+
+> 经膜上下介面两反射光比较，若 $n_1<n_2,n_2>n_3$ 或 $n_1>n_2,n_2<n_3$，有半波损失；若 $n_1<n_2,n_2<n_3$ 或 $n_1>n_2,n_2>n_3$，无半波损失。
+
+薄膜干涉
+
+> 明纹条件 $\Delta=2nd+\dfrac{\lambda}{2}=k\lambda$；暗纹条件 $\Delta=2nd+\dfrac{\lambda}{2}=(2k+1)\dfrac\lambda2$。
+>
+> 注意是否有半波损失。
+
+双缝干涉
+
+> 明纹条件 $\Delta=d\sin\theta=k\lambda$；暗纹条件 $\Delta=d\sin\theta=(2k+1)\dfrac\lambda2$。
+
+### 光的衍射
+
+单缝衍射
+
+> 明纹条件 $b\sin\theta=(2k+1)\dfrac\lambda2$；暗纹条件 $b\sin\theta=k\lambda$。
+
+瑞利判据
+
+> 最小分辨角 $\theta_0=1.22\dfrac\lambda D$。
+
+光栅衍射
+
+> 明纹条件 $(b+b')\sin\theta=k\lambda$，暗纹条件 $(b+b')\sin\theta=\dfrac{k'}{N}\lambda$，$k'$ 不为 $N$ 的整数倍；缺级条件光栅常量 $(b+b')$ 与缝宽 $b$ 构成整数比。
+
+### 光的偏振
+
+马吕斯定律
+
+> 若入射检偏器的光强为 $I_0$，则检偏器出射的光强为 $I=I_0\cos^2\alpha$。
+
+布儒斯特定律
+
+> 当入射角 $i$ 满足 $\tan i=\dfrac{n_2}{n_1}$ 时，反射光中只有垂直于入射面的光振动，而没有平行于入射面的光振动。
+
+## 15. 量子力学
+
+# 公式 Cheat Sheet
+
 ## 气体动理论
 
 ### 理想气体物态方程
