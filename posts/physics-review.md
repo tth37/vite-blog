@@ -102,11 +102,11 @@ tags: [tag1, tag2]
 
 等体过程
 
-> 设 $1 \text{mol}$ 理想气体在等体过程中所吸收的热量为 $\mathrm d Q_{V,m}，气体的温度由 $T$ 升高到 $T+\mathrm d T$，则气体的摩尔定容热容为 $C_{V,m}=\dfrac{\mathrm dQ_{V,m}}{\mathrm dT}=\dfrac{i}{2}R$。
+> 设 $1 \text{mol}$ 理想气体在等体过程中所吸收的热量为 $\mathrm d Q_{V,m}$，气体的温度由 $T$ 升高到 $T+\mathrm d T$，则气体的摩尔定容热容为 $C_{V,m}=\dfrac{\mathrm dQ_{V,m}}{\mathrm dT}=\dfrac{i}{2}R$。
 
 等压过程
 
-> 设 $1 \text{mol}$ 理想气体在等压过程中所吸收的热量为 $\mathrm d Q_{p,m}，气体的温度由 $T$ 升高到 $T+\mathrm d T$，则气体的摩尔定压热容为 $C_{p,m}=\dfrac{\mathrm dQ_{p,m}}{\mathrm dT}=\dfrac{i+2}{2}R+\dfrac{R}{M}$。比热容比 $\gamma=\dfrac{C_{p,m}}{C_{V,m}}=\dfrac{i+2}{i}$。
+> 设 $1 \text{mol}$ 理想气体在等压过程中所吸收的热量为 $\mathrm d Q_{p,m}$，气体的温度由 $T$ 升高到 $T+\mathrm d T$，则气体的摩尔定压热容为 $C_{p,m}=\dfrac{\mathrm dQ_{p,m}}{\mathrm dT}=\dfrac{i+2}{2}R+\dfrac{R}{M}$。比热容比 $\gamma=\dfrac{C_{p,m}}{C_{V,m}}=\dfrac{i+2}{i}$。
 
 等温过程
 
