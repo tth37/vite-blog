@@ -34,13 +34,13 @@ tags: [tag1, tag2]
 
 双缝干涉
 
-> 明纹条件 $\Delta=d\sin\theta=k\lambda$；暗纹条件 $\Delta=d\sin\theta=(2k+1)\dfrac\lambda2$。
+> 明纹条件 $\Delta=d\sin\theta=\pm k\lambda,k=0,1,2,\cdots$；暗纹条件 $\Delta=d\sin\theta=\pm(2k+1)\dfrac\lambda2,k=0,1,2,\cdots$。
 
 ### 光的衍射
 
 单缝衍射
 
-> 明纹条件 $b\sin\theta=(2k+1)\dfrac\lambda2$；暗纹条件 $b\sin\theta=k\lambda$。
+> 明纹条件 $b\sin\theta=\pm(2k+1)\dfrac\lambda2,k=1,2,3,\cdots$；暗纹条件 $b\sin\theta=\pm k\lambda,k=1,2,3,\cdots$。
 
 瑞利判据
 
@@ -48,7 +48,7 @@ tags: [tag1, tag2]
 
 光栅衍射
 
-> 明纹条件 $(b+b')\sin\theta=k\lambda$，暗纹条件 $(b+b')\sin\theta=\dfrac{k'}{N}\lambda$，$k'$ 不为 $N$ 的整数倍；缺级条件光栅常量 $(b+b')$ 与缝宽 $b$ 构成整数比。
+> 明纹条件 $(b+b')\sin\theta=\pm k\lambda,k=0,1,2,\cdots$，暗纹条件 $(b+b')\sin\theta=\dfrac{k'}{N}\lambda$，$k'$ 不为 $N$ 的整数倍；缺级条件光栅常量 $(b+b')$ 与缝宽 $b$ 构成整数比。
 
 ### 光的偏振
 
