@@ -60,7 +60,89 @@ tags: [tag1, tag2]
 
 > 当入射角 $i$ 满足 $\tan i=\dfrac{n_2}{n_1}$ 时，反射光中只有垂直于入射面的光振动，而没有平行于入射面的光振动。
 
+## 12. 气体动理论
+
+理想气体物态方程
+
+> $pV=\nu RT,p=nkT$。
+
+理想气体压强公式
+
+> 气体作用于器壁的压强正比于分子数密度 $n$ 和分子的平均平动动能 $\overline{\varepsilon_k}$，$p=\dfrac23n\overline{\varepsilon_k}$。
+
+理想气体温度公式
+
+> 气体分子的平均平动动能与气体的温度成正比，$\overline{\varepsilon_k}=\dfrac{3}{2}kT$。
+
+能量均分定理
+
+> 分子在各个方向运动的概率是相等的，即 $\overline{v_x^2}=\overline{v_y^2}=\overline{v_z^2}=\dfrac12kT$。
+
+分子的平均能量
+
+> 分子的平均能量 $\overline\varepsilon=\dfrac{i}{2}kT$，其中单原子分子自由度 $i=3$，刚性双原子分子自由度 $i=5$；理想气体的内能 $E=\dfrac{i}{2}\nu RT$。
+
+麦克斯韦速率分布率
+
+> 最概然速率 $v_p=\sqrt{\dfrac{2kT}{m}}=\sqrt{\dfrac{2RT}{M}}$；平均速率 $\overline v=\sqrt{\dfrac{8kT}{\pi m}}=\sqrt{\dfrac{8RT}{\pi M}}$；方均根速率 $v_{\text{rms}}=\sqrt{\overline{v^2}}=\sqrt{\dfrac{3kT}{m}}=\sqrt{\dfrac{3RT}{M}}$。
+
+玻尔兹曼分布率
+
+> 重力场中的等温气压公式 $p=p_0e^{-\frac{mgz}{kT}}$，式中 $p_0$ 和 $p$ 分别表示 $z=0$ 和 $z=z$ 处大气的压强。
+
+分子的平均碰撞频率和平均自由程
+
+> 平均碰撞频率 $\overline Z$ 与分子数密度 $n$、分子平均速率 $\overline v$ 成正比，也与分子直径 $d$ 的平方成正比，即 $\overline Z=\sqrt 2\pi d^2\overline v n$；平均自由程 $\overline \lambda=\dfrac{\overline v}{\overline Z}=\dfrac{1}{\sqrt2\pi d^2n}$。
+
 ## 15. 量子力学
+
+斯特藩-玻尔兹曼定律
+
+> 黑体的辐出度 $M(T)$ 与黑体的热力学温度 $T$ 的四次方成正比，即 $M(T)=\sigma T^4$。
+
+维恩位移定律
+
+> 当黑体的热力学温度升高时，在 $M_\lambda(T)-\lambda$ 的曲线上，与单色辐出度 $M_\lambda(T)$ 的峰值相对应的波长 $\lambda_m$ 向短波方向移动，且满足 $\lambda_mT=b$。
+
+光电效应
+
+> 爱因斯坦方程 $h\nu=\dfrac12mv^2+W$。
+
+康普顿效应
+
+> 光子和受原子束缚较弱的电子发生完全弹性碰撞，满足能量守恒定律和动量守恒定律，光子波长的改变量 $\Delta\lambda=\lambda-\lambda_0=\dfrac{h}{m_0c}(1-\cos\theta)$。
+
+玻尔氢原子理论
+
+> 波尔氢原子理论结果 $E_n=\dfrac{E_1}{n^2}, r_n=n^2r_1,v_n=\dfrac{v_1}{n}$。
+>
+> 当原子从高能量的定态跃迁到低能量的定态，要发射频率为 $\nu$ 的光子，且 $h\nu=E_i-E_f$
+
+德布罗意波
+
+> 实物粒子的波的波长为 $\lambda=\dfrac{h}{p}$，频率为 $\nu=\dfrac{E}{h}$。
+
+不确定关系
+
+> 对于微观粒子，不能同时用确定的位置和确定的动量来描述，$\Delta x\Delta p_x\ge h$。
+
+一维无限深方势阱
+
+> 定态波函数 $\Psi(x)=\sqrt{\dfrac{2}{a}}\sin\dfrac{n\pi}{a}x$；
+>
+> 概率密度 $|\Psi(x)|^2=\dfrac{2}{a}\sin^2\dfrac{n\pi}{a}x$；
+>
+> 能级 $E=n^2\dfrac{h^2}{8ma^2}$。
+
+量子数
+
+> 主量子数 $n=1,2,3,\cdots$；
+>
+> 角量子数 $l=0,1,2,\cdots,n-1$；
+>
+> 磁量子数 $m_l=-l,-l+1,\cdots,l-1,l$；
+>
+> 自旋磁量子数 $m_s=\pm\dfrac12$。
 
 # 公式 Cheat Sheet
 
