@@ -1,10 +1,10 @@
 <script setup>
-import Layout from "../components/Layout.vue"
-import WidgetAvatar from "../components/widgets/WidgetAvatar.vue"
-import WidgetAbout from "../components/widgets/WidgetAbout.vue";
-import WidgetTags from "../components/widgets/WidgetTags.vue";
-import WidgetBreadCrumb from "../components/widgets/WidgetBreadCrumb.vue";
-import WidgetCategories from "../components/widgets/WidgetCategories.vue";
+import Layout from "@/components/Layout.vue"
+import WidgetAvatar from "@/components/widgets/WidgetAvatar.vue"
+import WidgetAbout from "@/components/widgets/WidgetAbout.vue";
+import WidgetTags from "@/components/widgets/WidgetTags.vue";
+import WidgetBreadCrumb from "@/components/widgets/WidgetBreadCrumb.vue";
+import WidgetCategories from "@/components/widgets/WidgetCategories.vue";
 
 </script>
 

@@ -1,12 +1,12 @@
 <script setup>
-import Layout from "../components/Layout.vue"
-import WidgetAvatar from "../components/widgets/WidgetAvatar.vue"
-import WidgetAbout from "../components/widgets/WidgetAbout.vue";
-import WidgetCategories from "../components/widgets/WidgetCategories.vue";
-import WidgetTags from "../components/widgets/WidgetTags.vue";
-import WidgetAbstractCategory from "../components/widgets/WidgetAbstractCategory.vue";
+import Layout from "@/components/Layout.vue"
+import WidgetAvatar from "@/components/widgets/WidgetAvatar.vue"
+import WidgetAbout from "@/components/widgets/WidgetAbout.vue";
+import WidgetCategories from "@/components/widgets/WidgetCategories.vue";
+import WidgetTags from "@/components/widgets/WidgetTags.vue";
+import WidgetAbstractCategory from "@/components/widgets/WidgetAbstractCategory.vue";
 
-import WidgetBreadCrumb from "../components/widgets/WidgetBreadCrumb.vue";
+import WidgetBreadCrumb from "@/components/widgets/WidgetBreadCrumb.vue";
 
 const props = defineProps({
     curPage: {

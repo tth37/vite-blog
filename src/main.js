@@ -8,8 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 import { faClock, faFolderOpen, faLocationDot, faTag } from "@fortawesome/free-solid-svg-icons"
 import App from "./App.vue"
 import "./index.css"
-import "katex/dist/katex.min.css"
-import "highlight.js/styles/github.css"
 import "github-markdown-css/github-markdown-light.css"
 
 // Create Vue.js Application
