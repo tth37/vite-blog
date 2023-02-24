@@ -157,6 +157,12 @@ category: review
 
 > $\rho(XY)=\dfrac{\text{cov}(X,Y)}{\sqrt{DXDY}}$
 
+切比雪夫不等式
+
+> $$
+> P\left(\left|X-\mu\right|\geq\varepsilon\right)\leq\dfrac{D(X)}{\varepsilon^2}
+> $$
+
 ## 5. 大数定律和中心极限定理
 
 切比雪夫大数定律
@@ -164,13 +170,13 @@ category: review
 > 设随机变量 $X_1,X_2,\cdots,X_n$ 相互独立，均具有有限方差，且被同一常数 $C$ 所界：$D(X_i)\leq C,i=1,2,\cdots,n$，则对任意的正数 $\varepsilon$，有
 >
 > $$
-> \lim_{n\to\infty}P(\left|\frac{1}{n}\sum_{i=1}^n X_i -\frac{1}{n}\sum_{i=1}^n E(X_i)\right|<\varepsilon)=1
+> \lim_{n\to\infty}P\left(\left|\frac{1}{n}\sum_{i=1}^n X_i -\frac{1}{n}\sum_{i=1}^n E(X_i)\right|<\varepsilon\right)=1
 > $$
 >
 > 若 $X_1,X_2,\cdots,X_n$ 具有相同的数学期望 $E(X_i)=\mu$，则上式成为
 >
 > $$
-> \lim_{n\to\infty}P(\left|\frac{1}{n}\sum_{i=1}^n X_i -\mu\right|<\varepsilon)=1
+> \lim_{n\to\infty}P\left(\left|\frac{1}{n}\sum_{i=1}^n X_i -\mu\right|<\varepsilon\right)=1
 > $$
 >
 > 即
@@ -184,7 +190,7 @@ category: review
 > 设 $\mu$ 是 $n$ 次独立试验中事件 $A$ 发生的次数，$p$ 是事件 $A$ 在每次试验中发生的概率，则对于任意的正数 $\varepsilon$，有
 >
 > $$
-> \lim_{n\to\infty}P(\left|\frac{\mu}{n}-p\right|<\varepsilon)=1
+> \lim_{n\to\infty}P\left(\left|\frac{\mu}{n}-p\right|<\varepsilon\right)=1
 > $$
 
 辛钦大数定律
@@ -192,7 +198,7 @@ category: review
 > 设 $X_1,X_2,\cdots,X_n,\cdots$ 是相互独立同分布的随机变量序列，且 $E(X_i)=\mu$，则对于任意的正数 $\varepsilon$，有
 >
 > $$
-> \lim_{n\to\infty}P(\left|\frac{1}{n}\sum_{i=1}^n X_i -\mu\right|<\varepsilon)=1
+> \lim_{n\to\infty}P\left(\left|\frac{1}{n}\sum_{i=1}^n X_i -\mu\right|<\varepsilon\right)=1
 > $$
 >
 > 即
@@ -303,3 +309,32 @@ $F$ 分布
 > \frac{S_{1m}^2/\sigma_1^2}{S_{2n}^2/\sigma_2^2}\sim F(m-1,n-1)
 > $$
 
+## 7. 参数估计
+
+矩估计
+
+> 总体 $X$ 的数学期望 $\mu$ 的矩估计量为样本均值 $\overline X$，总体 $X$ 的方差 $\sigma^2$ 的矩估计量为样本的二阶中心矩 $B_2$。
+
+最大似然估计
+
+> 当总体 $X$ 为连续型随机变量时，设其分布密度为 $f(x;\theta_1,\theta_2,\cdots,\theta_m)$，其中 $\theta_1,\theta_2,\cdots,\theta_m$ 为未知参数。又设 $X_1,X_2,\cdots,X_n$ 为总体的一个样本，称
+>
+> $$
+> L(\theta_1,\theta_2,\cdots,\theta_m)=\prod_{i=1}^nf(X_i;\theta_1,\theta_2,\cdots,\theta_m)
+> $$
+>
+> 为样本的似然函数，简记为 $L(\theta)$。
+>
+> 若似然函数 $L_1(\theta)$ 在 $\hat \theta_1,\hat \theta_2,\cdots,\hat \theta_m$ 处取得最大值，则称 $\hat \theta_1,\hat \theta_2,\cdots,\hat \theta_m$ 为总体参数 $\theta_1,\theta_2,\cdots,\theta_m$ 的最大似然估计量。
+
+估计量的评选标准
+
+> 无偏性：设 $\hat \theta$ 为未知参数 $\theta$ 的估计量，若 $E\hat \theta=\theta$，则称 $\hat \theta$ 为 $\theta$ 的无偏估计量。
+>
+> 有效性：设 $\hat \theta_1$ 和 $\hat \theta_2$ 为未知参数 $\theta$ 的两个无偏估计量。若 $D\hat \theta_1\le D\hat \theta_2$，则称 $\hat \theta_1$ 比 $\hat \theta_2$ 有效。
+>
+> 相合性：设 $\hat\theta_n$ 是 $\theta$ 的一串估计量，如果对于任意的正数 $\varepsilon$，都有
+>
+> $$
+> \lim_{n\to\infty}P\left(\left|\hat\theta_n-\theta\right|>\varepsilon\right)=0
+> $$
