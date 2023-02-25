@@ -259,8 +259,6 @@ $F$ 分布
 
 正态总体中统计量的分布
 
-
-
 > $\overline X$ 与 $S^2$ 相互独立。
 >
 > 正态分布：
@@ -392,11 +390,47 @@ $F$ 分布
 
 ## 8. 假设检验
 
-单个正态总体均值检验
+单个正态总体均值 $\mu$ 检验
 
 > 已知 $\sigma$：
 >
-> | H_0   | H_1   | 拒绝 $H_0$ 的区域 |
-> | :---: | :---: | :---: |
-> 
-> 
+> 统计量 $U=\dfrac{\overline X-\mu_0}{\sigma_0/\sqrt n}\sim N(0,1)$
+>
+> | $H_0$ | $H_1$ | 拒绝 $H_0$ 的区域 |
+> | :---: | :---: | :--------------- |
+> | $\mu=\mu_0$ | $\mu\ne\mu_0$ | $\|u\|\ge u_{\frac\alpha2}$ |
+> $\mu\le\mu_0$ | $\mu>\mu_0$ | $u\ge u_{\alpha}$ |
+> $\mu\ge\mu_0$ | $\mu<\mu_0$ | $u\le -u_{\alpha}$ |
+>
+> 未知 $\sigma$：
+>
+> 统计量 $T=\dfrac{\overline X-\mu_0}{S/\sqrt n}\sim t(n-1)$
+>
+> | $H_0$ | $H_1$ | 拒绝 $H_0$ 的区域 |
+> | :---: | :---: | :--------------- |
+> | $\mu=\mu_0$ | $\mu\ne\mu_0$ | $\|t\|\ge t_{\frac\alpha2}(n-1)$ |
+> | $\mu\le\mu_0$ | $\mu>\mu_0$ | $t\ge t_{\alpha}(n-1)$ |
+> | $\mu\ge\mu_0$ | $\mu<\mu_0$ | $t\le -t_{\alpha}(n-1)$ |
+
+
+单个正态总体方差 $\sigma^2$ 检验
+
+> 已知 $\mu$：
+>
+> 统计量 $\chi^2=\dfrac{\sum_{i=1}^n(X_i-\mu)^2}{\sigma_0^2}\sim\chi^2(n)$
+>
+> | $H_0$ | $H_1$ | 拒绝 $H_0$ 的区域 |
+> | :---: | :---: | :--------------- |
+> | $\sigma^2=\sigma_0^2$ | $\sigma^2\ne\sigma_0^2$ | $\chi^2\le \chi^2_{1-\frac\alpha2}(n)$ 或 $\chi^2\ge \chi^2_{\frac\alpha2}(n)$ |
+> | $\sigma^2\le\sigma_0^2$ | $\sigma^2>\sigma_0^2$ | $\chi^2\ge \chi^2_{\alpha}(n)$ |
+> | $\sigma^2\ge\sigma_0^2$ | $\sigma^2<\sigma_0^2$ | $\chi^2\le \chi^2_{1-\alpha}(n)$ |
+>
+> 未知 $\mu$：
+>
+> 统计量 $\chi^2=\dfrac{(n-1)S^2}{\sigma_0^2}\sim\chi^2(n-1)$
+>
+> | $H_0$ | $H_1$ | 拒绝 $H_0$ 的区域 |
+> | :---: | :---: | :--------------- |
+> | $\sigma^2=\sigma_0^2$ | $\sigma^2\ne\sigma_0^2$ | $\chi^2\le \chi^2_{1-\frac\alpha2}(n-1)$ 或 $\chi^2\ge \chi^2_{\frac\alpha2}(n-1)$ |
+> | $\sigma^2\le\sigma_0^2$ | $\sigma^2>\sigma_0^2$ | $\chi^2\ge \chi^2_{\alpha}(n-1)$ |
+> | $\sigma^2\ge\sigma_0^2$ | $\sigma^2<\sigma_0^2$ | $\chi^2\le \chi^2_{1-\alpha}(n-1)$ |
