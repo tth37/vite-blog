@@ -91,7 +91,7 @@ category: review
 >
 > $EX=\dfrac{a+b}{2}$
 >
-> $DX=\dfrac{(b-a)^2}{12}$
+> $\color{red}DX=\dfrac{(b-a)^2}{12}$
 
 指数分布
 
