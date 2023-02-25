@@ -266,19 +266,20 @@ $F$ 分布
 > 正态分布：
 >
 > $$
-> u=\frac{\overline X-\mu}{\sigma /\sqrt n}\sim N(0,1)
+> U=\frac{\overline X-\mu}{\sigma /\sqrt n}\sim N(0,1)
 > $$
 >
 > $t$ 分布：
 >
 > $$
-> t=\frac{\overline X-\mu}{S/\sqrt n}\sim t(n-1)
+> T=\frac{\overline X-\mu}{S/\sqrt n}\sim t(n-1)
 > $$
 >
 > $\chi^2$ 分布：
 >
 > $$
-> w-\frac{(n-1)S^2}{\sigma^2}\sim\chi^2(n-1)
+> \chi^2=\frac{(n-1)S^2}{\sigma^2}\sim\chi^2(n-1)\\
+> \chi^2=\frac{\sum_{i=1}^n(X_i-\mu)^2}{\sigma^2}\sim\chi^2(n)
 > $$
 
 双正态总体中统计量的分布
@@ -286,13 +287,13 @@ $F$ 分布
 > 正态分布：
 >
 > $$
-> u=\frac{\overline X-\overline Y-(\mu_1-\mu_2)}{\sqrt{\dfrac{\sigma_1^2}{m}+\dfrac{\sigma_2^2}{n}}}\sim N(0,1)
+> U=\frac{\overline X-\overline Y-(\mu_1-\mu_2)}{\sqrt{\dfrac{\sigma_1^2}{m}+\dfrac{\sigma_2^2}{n}}}\sim N(0,1)
 > $$
 >
 > $t$ 分布：
 >
 > $$
-> t=\frac{\overline X-\overline Y-(\mu_1-\mu_2)}{S_w\sqrt{\dfrac{1}{m}+\dfrac{1}{n}}}\sim t(m+n-2)
+> T=\frac{\overline X-\overline Y-(\mu_1-\mu_2)}{S_w\sqrt{\dfrac{1}{m}+\dfrac{1}{n}}}\sim t(m+n-2)
 > $$
 >
 > 其中 $S_w=\dfrac{(m-1)S_{1m}^2+(n-1)S_{2n}^2}{m+n-2}$。
@@ -300,13 +301,13 @@ $F$ 分布
 > $\chi^2$ 分布：
 >
 > $$
-> \frac{(m-1)S_{1m}^2}{\sigma_1^2}+\frac{(n-1)S_{2n}^2}{\sigma_2^2}\sim\chi^2(m+n-2)
+> \chi^2=\frac{(m-1)S_{1m}^2}{\sigma_1^2}+\frac{(n-1)S_{2n}^2}{\sigma_2^2}\sim\chi^2(m+n-2)
 > $$
 >
 > $F$ 分布：
 >
 > $$
-> \frac{S_{1m}^2/\sigma_1^2}{S_{2n}^2/\sigma_2^2}\sim F(m-1,n-1)
+> f=\frac{S_{1m}^2/\sigma_1^2}{S_{2n}^2/\sigma_2^2}\sim F(m-1,n-1)
 > $$
 
 ## 7. 参数估计
@@ -338,3 +339,64 @@ $F$ 分布
 > $$
 > \lim_{n\to\infty}P\left(\left|\hat\theta_n-\theta\right|>\varepsilon\right)=0
 > $$
+
+单正态总体期望和方差的期望估计
+
+> 估计 $\mu$，已知 $\sigma$：
+>
+> $$
+> P\left(-u_{\frac{\alpha}{2}}<\frac{\overline X-\mu}{\sigma /\sqrt n}<u_{\frac{\alpha}{2}}\right)=1-\alpha
+> $$
+>
+> 导出 $\mu$ 的置信度为 $1-\alpha$ 的置信区间
+>
+> $$
+> \left(\overline X-\frac{\sigma}{\sqrt n}u_{\frac\alpha2},\overline X+\frac{\sigma}{\sqrt n}u_{\frac\alpha2}\right)
+> $$
+>
+> 估计 $\mu$，未知 $\sigma$：
+>
+> $$
+> P\left(-t_{\frac\alpha2}(n-1)<\frac{\overline X-\mu}{S/\sqrt n}<t_{\frac\alpha2}(n-1)\right)=1-\alpha
+> $$
+>
+> 导出 $\mu$ 的置信度为 $1-\alpha$ 的置信区间
+>
+> $$
+> \left(\overline X-\frac{S}{\sqrt n}t_{\frac\alpha2}(n-1),\overline X+\frac{S}{\sqrt n}t_{\frac\alpha2}(n-1)\right)
+> $$
+>
+> 估计 $\sigma$，已知 $\mu$：
+>
+> $$
+> P\left(\chi^2_{1-\frac\alpha2}(n)<\frac{\sum_{i=1}^n(X_i-\mu)^2}{\sigma^2}<\chi^2_{\frac\alpha2}(n)\right)=1-\alpha
+> $$
+>
+> 导出 $\sigma$ 的置信度为 $1-\alpha$ 的置信区间
+>
+> $$
+> \left(\frac{1}{\chi^2_{\frac\alpha2}(n)}\sum_{i=1}^n(X_i-\mu)^2,\frac{1}{\chi^2_{1-\frac\alpha2}(n)}\sum_{i=1}^n(X_i-\mu)^2\right)
+> $$
+>
+> 估计 $\sigma$，未知 $\mu$：
+>
+> $$
+> P\left(\chi^2_{1-\frac\alpha2}(n-1)<\frac{(n-1)S^2}{\sigma^2}<\chi^2_{\frac\alpha2}(n-1)\right)=1-\alpha
+> $$
+>
+> 导出 $\sigma$ 的置信度为 $1-\alpha$ 的置信区间
+>
+> $$
+> \left(\frac{(n-1)S^2}{\chi^2_{\frac\alpha2}(n-1)},\frac{(n-1)S^2}{\chi^2_{1-\frac\alpha2}(n-1)}\right)
+> $$
+
+## 8. 假设检验
+
+单个正态总体均值检验
+
+> 已知 $\sigma$：
+>
+> | H_0   | H_1   | 拒绝 $H_0$ 的区域 |
+> | :---: | :---: | :---: |
+> 
+> 
