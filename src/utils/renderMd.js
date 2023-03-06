@@ -2,6 +2,7 @@ import hljs from "highlight.js"
 import md from "markdown-it"
 import mk from "./markdown-it-katex"
 import anchor from "markdown-it-anchor"
+import mc from "markdown-it-checkbox"
 
 const renderer = md({
     html: true,
@@ -18,7 +19,7 @@ const renderer = md({
     permalinkBefore: true,
     permalinkSymbol: "¶",
     level: [1, 2]
-})
+}).use(mc)
 
 export function renderMd(str) {
     return renderer.render(str)

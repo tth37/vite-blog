@@ -1178,6 +1178,13 @@ markdown-it-anchor@^8.6.7:
   resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.6.7.tgz#ee6926daf3ad1ed5e4e3968b1740eef1c6399634"
   integrity sha512-FlCHFwNnutLgVTflOYHPW2pPcl2AACqVzExlkGQNsi4CJgqOHN7YTgDd4LuhgN1BFO3TS0vLAruV1Td6dwWPJA==
 
+markdown-it-checkbox@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmmirror.com/markdown-it-checkbox/-/markdown-it-checkbox-1.1.0.tgz#20cff97f33d77d172f9dcf1bcfc92cecc5330fac"
+  integrity sha512-NkZVjnXo5G+cLNdi7DPZxICypBuxFE9F8sx3YGMZn+Cfizr8EZ/1TFUKl7ZnefF6cr1aFHbnQ5iA3rc4cp7EyA==
+  dependencies:
+    underscore "^1.8.2"
+
 markdown-it@^13.0.1:
   version "13.0.1"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-13.0.1.tgz#c6ecc431cacf1a5da531423fc6a42807814af430"
@@ -1743,6 +1750,11 @@ undefsafe@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/undefsafe/-/undefsafe-2.0.5.tgz#38733b9327bdcd226db889fb723a6efd162e6e2c"
   integrity sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==
+
+underscore@^1.8.2:
+  version "1.13.6"
+  resolved "https://registry.npmmirror.com/underscore/-/underscore-1.13.6.tgz#04786a1f589dc6c09f761fc5f45b89e935136441"
+  integrity sha512-+A5Sja4HP1M08MaXya7p5LvjuM7K6q/2EaC0+iovj/wOcMsTzMvDFbasi/oSapiwOlt252IqsKqPjCl7huKS0A==
 
 update-browserslist-db@^1.0.10:
   version "1.0.10"
