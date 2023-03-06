@@ -8,8 +8,8 @@ abstract: Attachment, Take-away Messages, Ideas and Thoughts
 
 ### Attachment
 
-- [Slides - CH01](https://www.overleaf.com/project/5f88e06c42853600014b1979)
-- [Slides - CH02](https://www.overleaf.com/project/5f88e0ba42853600014b19e2)
+- [Slides - CH01](https://www.overleaf.com/read/zqqddsbysxnp)
+- [Slides - CH02](https://www.overleaf.com/read/qcdfkfpmtcwk)
 
 ### Take-away Messages
 
