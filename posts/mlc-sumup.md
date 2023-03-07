@@ -8,10 +8,10 @@ tags:
     - MLC
 ---
 
-> **Machine Learning Complication**
->
-> - [Homepage](https://mlc.ai/summer22-zh/)
-> - [Schedule](https://mlc.ai/summer22-zh/schedule)
+# Machine Learning Complication
+
+- [Homepage](https://mlc.ai/summer22-zh/)
+- [Schedule](https://mlc.ai/summer22-zh/schedule)
 
 ## Course 1#, 2023-03-06
 
@@ -38,3 +38,20 @@ MLC 的关键要素：**Tensor**，**Tensor Functions**。
 ### Take-away Messages
 
 典型的元张量函数抽象：**存储数据的多维数组**，**驱动张量计算的循环嵌套**以及**计算部分本身的语句**。
+
+## Course 3#, 2023-03-07
+
+### Attachment
+
+- [Video - Lect 3#](https://www.bilibili.com/video/BV1c94y1d7rW)
+- [Notes - Lect 3#](https://mlc.ai/zh/chapter_tensor_program/case_study.html)
+
+### Take-away Messages
+
+一类张量程序抽象 - **TensorIR**。TensorIR 中包含 Buffer、循环和计算块以及若干附加信息（块轴范围及其属性）。借助这些附加信息，TVM 框架可以自动地实现**张量程序变换**。
+
+### Ideas and Thoughts
+
+- [ ] Spatial Axis vs. Reduction Axis?
+
+“虽然我们总是可以在空间轴上做并行化，在规约轴上进行并行化将需要特定的策略。” - [为什么块需要额外附加的信息 - TensorIR: 张量程序抽象案例研究](https://mlc.ai/zh/chapter_tensor_program/case_study.html#id7)
