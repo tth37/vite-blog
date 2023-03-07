@@ -2,6 +2,9 @@
 title: SEUOSC 课程小结
 date: Mon Mar 06 2023 18:54:24 GMT+0800 (中国标准时间)
 abstract: Attachment, Take-away Messages, Ideas and Thoughts
+category: Course Sum-up
+tags:
+    - Operating System
 ---
 
 ## Course 3#, 2023-03-06

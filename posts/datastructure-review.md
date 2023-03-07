@@ -2,7 +2,7 @@
 title: 数据结构期末复习
 date: Mon Feb 20 2023 18:46:21 GMT+0800 (中国标准时间)
 abstract: Cheat Sheet
-category: review
+category: Course Review
 ---
 
 # 数据结构期末复习

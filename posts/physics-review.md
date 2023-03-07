@@ -2,8 +2,7 @@
 title: 大学物理（下）期末复习
 date: Sat Feb 18 2023 00:00:17 GMT+0800 (中国标准时间)
 abstract: 气体动理论，热力学基础，量子力学
-category: review
-tags: [tag1, tag2]
+category: Course Review
 ---
 
 # 大学物理（下）期末复习

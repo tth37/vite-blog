@@ -2,7 +2,7 @@
 title: 概率论与数理统计期末复习
 date: Fri Feb 24 2023 18:25:47 GMT+0800 (中国标准时间)
 abstract: 期末复习
-category: review
+category: Course Review
 ---
 
 # 概率论与数理统计期末复习

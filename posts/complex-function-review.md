@@ -2,8 +2,7 @@
 title: 复变函数期末复习
 date: Sat Feb 18 2023 11:17:09 GMT+0800 (中国标准时间)
 abstract: Cheat sheet
-tags: [tag1]
-category: review
+category: Course Review
 ---
 
 # 复变函数期末复习

@@ -2,6 +2,9 @@
 title: NJUOS 课程小结
 date: Mon Mar 06 2023 19:14:04 GMT+0800 (中国标准时间)
 abstract: Attachment, Take-away Messages, Ideas and Thoughts
+category: Course Sum-up
+tags:
+    - Operating System
 ---
 
 ## Course 2#, 2023-03-06
