@@ -84,3 +84,14 @@ MLC 的关键要素：**Tensor**，**Tensor Functions**。
 输入和输出张量在元张量函数外部**显式分配**并传递给底层元函数。
 
 “算子具体的impl对计算图层面来讲是opaque的，甚至是不care的，图级别的优化也就很难介入算子内部来控制内存的访问，而把内存管理权上交给更高level的表示（比如graph level）能够让tvm更好地探索inter-op optimization的潜力。” - [端到端模型整合 - Bilibili](https://www.bilibili.com/video/BV1Lf4y1o7xM/)
+
+## Course 5#, 2023-03-11
+
+### Attachment
+
+- [Video - Lect 5#](https://www.bilibili.com/video/BV1ST411J7mR)
+- [Notes - Lect 5#](https://mlc.ai/zh/chapter_auto_program_optimization/index.html)
+
+### Take-away Messages
+
+**Meta-Schedule** 在搜索空间中搜索可能的元张量程序变换，并找到优化后的程序。将出事的元张量函数替换为优化后的函数，可以更新端到端执行流程。
