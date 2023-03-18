@@ -41,3 +41,18 @@ tags:
 ### Ideas and Thoughts
 
 - [ ] Gdb 如何显示源代码/汇编代码？
+
+## Course 4#, 2023-03-13
+
+### Attachment
+
+- [Video - Lect 4#](https://www.bilibili.com/video/BV1Zb411D7jE)
+- [IPynb - Lect 4#](https://jyywiki.cn/OS/2023/build/lect4.ipynb)
+
+### Take-away Messages
+
+我们可以用 “简化” 的方式把操作系统的概念用可执行模型的方式呈现出来：
+
+- 程序被建模为高级语言 (Python) 的执行和系统调用
+- 系统调用的实现未必一定需要基于真实或模拟的计算机硬件
+- 操作系统的 “行为模型” 更容易理解
