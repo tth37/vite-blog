@@ -56,3 +56,18 @@ tags:
 - 程序被建模为高级语言 (Python) 的执行和系统调用
 - 系统调用的实现未必一定需要基于真实或模拟的计算机硬件
 - 操作系统的 “行为模型” 更容易理解
+
+## Course 5#, 2023-03-19
+
+### Attachment
+
+- [Video - Lect 4#](https://www.bilibili.com/video/BV1is4y1V7Gz)
+- [IPynb - Lect 4#](https://jyywiki.cn/OS/2023/build/lect5.ipynb)
+
+### Take-away Messages
+
+在一个简化的模型中，多线程/多进程程序就是 “状态机的集合”，每一步选一个状态机执行一步。然而，真实的系统可能带来一些复杂性：
+
+- 指令/代码执行原子性假设不再成立
+- 程序的顺序执行假设不再成立
+- 多处理器间内存访问无法即时可见
