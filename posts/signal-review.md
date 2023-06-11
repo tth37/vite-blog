@@ -373,6 +373,8 @@ category: Course Review
 >
 > $H(e^{j\omega})=\dfrac{Y(e^{j\omega})}{X(e^{j\omega})}=\dfrac{\displaystyle\sum_{k=0}^M b_k e^{-j\omega k}}{\displaystyle\sum_{k=0}^N a_k e^{-j\omega k}}$
 
+## 5. 离散傅里叶变换（DFT）
+
 离散傅里叶变换（DFT）
 
 > $W_N=e^{-j\frac{2\pi}{N}}$
@@ -436,3 +438,84 @@ category: Course Review
 IDFT 的快速算法（IFFT）
 
 > $x(n)=\dfrac1N\{\text{DFT}[X^*(k)]\}^*$
+
+## 6. $z$ 变换
+
+$z$ 变换的定义
+
+> 单位脉冲响应为 $h(n)$ 的离散时间 LTI 系统，对复指数信号 $z^n$ 的输出响应 $y(n)$ 为 $y(n)=H(z)z^n$，其中 $H(z)=\displaystyle\sum_{n=-\infty}^{\infty}h(n)z^{-n}$。
+
+$z$ 变换与离散时间傅里叶变换（DTFT）的关系
+
+> $X(e^{j\omega})=X(z)\Large|_{z=e^{j\omega}}$
+>
+> 离散时间傅里叶变换是**单位圆上的 $z$ 变换**
+
+$z$ 变换与离散傅里叶变换（DFT）的关系
+
+> $X(k)=X(z)\Large|_{z=e^{j\frac{2\pi}{N}k}}$
+>
+> 有限长序列的离散傅里叶变换是其 $z$ 变换在单位圆上的均匀抽样，或对其离散时间傅里叶变换在 $0\sim 2\pi$ 区间内的均匀抽样
+
+$z$ 变换的收敛域
+
+> 使 $X(z)$ 存在且有限的 $z$ 的取值范围，称为 $X(z)$ 的收敛域。级数的和存在且有限，$X(z)$ 就收敛。
+>
+> $z$ 变换收敛域的特征：
+>
+> 1. 收敛域是 $z$ 平面内以原点为中心的圆环，收敛域内不含极点
+> 2. 有限长序列的收敛域为除 $z=0$ 和 $|z|=\infty$ 外的整个 $z$ 平面
+> 3. 右边序列（因果序列）的收敛域位于最外部极点的外部
+> 4. 左边序列（反因果序列）的收敛域位于最内部极点的内部
+> 5. 双边序列的收敛域为一环形区域
+
+常用序列的 $z$ 变换
+
+| 序列 | $z$ 变换 | 收敛域 |
+| :--: | :------: | :----: |
+| $\delta(n)$ | $1$ | 整个 $z$ 平面 |
+| $u(n)$ | $\dfrac{z}{z-1}$ | $\|z\|>1$ |
+| $-u(-n-1)$ | $\dfrac{z}{z-1}$ | $\|z\|<1$ |
+| $\delta(n-m)$ | $\dfrac1{z^m}$ | 除去 $z=0(m>0)$ 或 $z=\infty(m<0)$ 的全部 $z$ |
+| $a^nu(n)$ | $\dfrac{z}{z-a}$ | $\|z\|>\|a\|$ |
+| $-a^nu(-n-1)$ | $\dfrac{z}{z-a}$ | $\|z\|<\|a\|$ |
+
+双边 $z$ 变换的性质
+
+| 性质 | $z$ 变换 | 收敛域 |
+| :--: | :------: | :----: |
+| 时移特性 | $x(n-n_0)\leftrightarrow z^{-n_0}X(z)$ | 收敛域在原点或无穷远处可能发生变化 |
+| 线性特性 | $ax(n)+by(n)\leftrightarrow aX(z)+bY(z)$ | 一般情况下是各个信号收敛域的公共部分，若在相加过程中出现零极点相抵消的现象，收敛域可能有所扩大 |
+| 时域反转特性 | $x(-n)\leftrightarrow X(z^{-1})$ | $\dfrac1b<\|z\|<\dfrac1a$ |
+| 卷积定理 | $x(n)*y(n)\leftrightarrow X(z)Y(z)$ | 两个信号收敛域的公共部分 |
+| $z$ 域微分特性 | $nx(n)\leftrightarrow -z\dfrac{\mathrm dX(z)}{\mathrm dz}$ | 收敛域不变 |
+| 时域求和性质 | $\displaystyle\sum_{k=-\infty}^nx(k)\leftrightarrow \dfrac{z}{z-1}X(z)$ | $R\cap \|z\|>1$ |
+| 初值定理 | $x(0)=\displaystyle\lim_{z\to\infty}X(z),x(n)=\displaystyle\lim_{z\to\infty}z^n\left[X(z)-\displaystyle\sum_{k=0}^{n-1}x(k)z^{-k}\right]$ | / |
+| 终值定理 | $x(\infty)=\displaystyle\lim_{z\to1}(z-1)X(z)$ | / |
+
+$z$ 反变换
+
+> $z$ 反变换的计算方法：
+>
+> 1. 幂级数展开法
+> 2. 部分分式展开法：将 $\dfrac{X(z)}z$ 展开
+
+系统函数的极点分布与系统的特性
+
+> 因果系统：收敛域为最外边极点的外边
+> 稳定系统：收敛域一定包含单位圆
+> 因果且稳定系统：全部极点一定在 $z$ 平面单位圆内
+
+单边 $z$ 变换
+
+> $X(z)=\displaystyle\sum_{n=0}^{\infty}x(n)z^{-n}$
+>
+> 右边（因果）序列，单边 $z$ 变换与双边 $z$ 变换相同
+>
+> 双边 $z$ 变换的移位性质：$x(n-n_0)\leftrightarrow z^{-n_0}X(z)$
+>
+> 单边 $z$ 变换的移位性质
+>
+> 1. 右移：$x(n-n_0)\leftrightarrow z^{-n_0}X(z)+z^{-n_0}\displaystyle\sum_{n=-n_0}^{-1}x(n)z^{-n},n_0>0$
+> 2. 左移：$x(n-n_0)\leftrightarrow z^{n_0}X(z)-z^{n_0}\displaystyle\sum_{n=0}^{n_0-1}x(n)z^{-n},n_0>0$
+
