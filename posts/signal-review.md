@@ -119,7 +119,7 @@ category: Course Review
 >
 > $\begin{cases}w(n)=b_0x(n)+b_1x(n-1)\\y(n)=-ay(n-1)+w(n)\end{cases}$
 
-![](../public/assets/fig1.png)
+![](https://tth37.top/assets/fig1.png)
 
 卷积的定义
 
@@ -161,7 +161,7 @@ category: Course Review
 
 ## 3. 连续时间信号与系统的频域分析
 
-周期信号
+连续时间周期信号的傅里叶级数
 
 > 如果连续时间信号 $x(t)$ 是周期的，则对任何 $t$ 都应满足 $x(t)=x(t+T)$。其中，$T$ 是一个非零的正实数。满足上式的最小非零正值 $T_0$ 称为该信号的**基波周期**，$\Omega_0=\dfrac{2\pi}{T_0}$ 称为**基波频率**。
 >
@@ -239,3 +239,136 @@ category: Course Review
 | 线性特性 | $ax(t)+by(t)\leftrightarrow aX(j\Omega)+bY(j\Omega)$ |
 | 延时特性 | $x(t-t_0)\leftrightarrow X(j\Omega)e^{-j\Omega t_0}$ |
 | 移频特性 | $x(t)e^{j\Omega_0t}\leftrightarrow X(j(\Omega-\Omega_0))$ |
+| 尺度变换特性 | $x(at)\leftrightarrow \dfrac{1}{\|a\|}X\left(\dfrac{j\Omega}{a}\right)$ |
+| 共轭对称特性 | $X^*(j\Omega)=X(-j\Omega)$ |
+| 对偶特性 | $X(jt)\leftrightarrow 2\pi x(-\Omega)$ |
+| 时域微分特性 | $\dfrac{\mathrm dx(t)}{\mathrm dt}\leftrightarrow j\Omega X(j\Omega),\dfrac{\mathrm d^nx(t)}{\mathrm dt^n}\leftrightarrow (j\Omega)^nX(j\Omega)$ |
+| 时域积分特性 | $\int_{-\infty}^tx(\tau)\mathrm d\tau\leftrightarrow \dfrac{1}{j\Omega}X(j\Omega)+\pi X(0)\delta(\Omega)$ |
+| 频域微分特性 | $-jtx(t)\leftrightarrow \dfrac{\mathrm dX(j\Omega)}{\mathrm d\Omega},(-jt)^nx(t)\leftrightarrow \dfrac{\mathrm d^nX(j\Omega)}{\mathrm d\Omega^n}$ |
+| 频域积分特性 | $-\dfrac{x(t)}{jt}+\pi x(0)\delta(t)\leftrightarrow\int_{-\infty}^\Omega X(j\tau)\mathrm d\tau$ |
+| 卷积特性 | $x(t)*y(t)\leftrightarrow X(j\Omega)Y(j\Omega), x(t)y(t)\leftrightarrow \dfrac{1}{2\pi}X(j\Omega)*Y(j\Omega)$ |
+| 帕斯瓦尔定理 | $\left\|X(j\Omega)\right\|^2$ 称为**能量谱密度**，$\left\|\dot A_k\right\|^2$ 称为**功率谱** |
+
+线性常系数微分方程与频率响应
+
+> $n$ 阶 LTI 连续系统：$\displaystyle\sum_{k=0}^N\frac{\mathrm d^ky(t)}{\mathrm dt^k}=\displaystyle\sum_{k=0}^M\frac{\mathrm d^kx(t)}{\mathrm dt^k}$
+>
+> 根据傅里叶变换的时域微分特性：$\displaystyle\sum_{k=0}^Na_k(j\Omega)^kY(j\Omega)=\displaystyle\sum_{k=0}^Mb_k(j\Omega)^kX(j\Omega)$
+>
+> $H(j\Omega)=\dfrac{Y(j\Omega)}{X(j\Omega)}=\dfrac{\displaystyle\sum_{k=0}^Mb_k(j\Omega)^k}{\displaystyle\sum_{k=0}^Na_k(j\Omega)^k}$
+
+无失真传输系统的频响特性
+
+> 不失真的系统必然满足：$y(t)=Kx(t-t_0)$，$Y(j\Omega)=KX(j\Omega)e^{-j\Omega t_0}$，$H(j\Omega)=Ke^{-j\Omega t_0}$
+>
+> 信号通过系统不产生失真的理想条件：
+>
+> 1. 系统的幅频特性在整个频率范围内为一常数
+> 2. 系统的相频特性应是**过原点**的一条直线
+
+理想低通滤波器的频率特性
+
+> $H(j\Omega)=\begin{cases}Ke^{-j\Omega t_0},&|\Omega|\leq \Omega_c\\0,&|\Omega|>\Omega_c\end{cases}$
+>
+> $H(j\Omega)=Ke^{-j\Omega t_0}[u(\Omega+\Omega_c)-u(\Omega-\Omega_c)]$
+> 
+> 其中 $\Omega_c$ 为截止频率，$t_0$ 为系统的延时时间。
+
+理想低通滤波器的单位冲激响应
+
+> $h(t)=\dfrac{K\sin\left(\Omega_c(t-t_0)\right)}{\pi(t-t_0)}$
+
+双边带正弦幅度调制与同步解调
+
+> 调制：$x_c(t)=x(t)\cos\Omega_0t$（幅度减半，带宽加倍）
+>
+> 解调：$r(t)=x_c(t)\cos\Omega_0t$，并让 $r(t)$ 通过一个增益为 $2$ 的理想低通滤波器
+
+理想抽样模型
+
+> $x_s(t)=x(t)\delta_T(t)$，其中 $T$ 为抽样间隔，$\Omega_s=2\pi/T$ 为抽样频率
+>
+> $\delta_T(t)\leftrightarrow \Omega_s\delta_{\Omega_s}(\Omega)$
+>
+> 利用卷积特性，$x_s(t)=x(t)\delta_T(t)\leftrightarrow \dfrac{1}{2\pi}X(j\Omega)*\Omega_s\delta_{\Omega_s}(\Omega)$
+>
+> 特点：理想抽样后的频谱，是将连续信号的频谱进行**周期延拓**，延拓的周期是**抽样频率**，频谱幅度乘以 **$\dfrac1T$**
+
+信号的时域内插恢复
+
+> 内插函数：$h(t)=T\dfrac{\Omega_c}{\pi}\text{Sa}(\Omega_ct)$
+>
+> 要从连续时间信号的离散样本恢复连续信号必须满足三个条件：
+>
+> 1. 连续信号要带限与 $\Omega_m$
+> 2. 采样频率 $\Omega_s\ge 2\Omega_m$
+> 3. $\Omega_m\le\Omega_c\le(\Omega_s-\Omega_m)$
+>
+> 不满足条件 1 和 2 时产生**频谱混叠**现象（欠采样）
+
+奈奎斯特抽样定理（香农抽样定理）
+
+> 设 $x(t)$ 带限与 $\Omega_m$。如果抽样频率 $\Omega_s\ge2\Omega_m$，其中 $\Omega_s=\dfrac{2\pi}T$，那么 $x(t)$ 就唯一地由其样本 $x_s(t)$ 所确定。
+
+## 4. 离散时间信号与系统的频域分析
+
+离散时间周期信号的傅里叶级数
+
+> 如果离散时间信号 $x(n)$ 是周期的，则对任何 $n$ 都满足 $x(n)=x(n+N)$，其中 $N$ 是正整数，称为信号的周期。复指数信号 $e^{j\frac{2\pi}{N}n}$ 就是一个以 $N$ 为周期的信号。
+>
+> 如果把以 $N$ 为周期的所有离散时间周期性复指数信号组合起来，可以构成一个信号集 $\phi_k(n)=\{e^{j\frac{2\pi}{N}kn}\},k=0,1,2,\cdots,N-1$，$N$ 是这个信号集的基波周期。由于该信号集中的每一个信号的频率都是基波频率 $2\pi/N$ 的整数倍，因此称它们是呈谐波关系的。然而与连续时间成谐波关系的复指数信号集不同的是，信号集 $\phi_k(n)$ 中只有 $N$ 个信号是独立的。这是因为任何在频率上相差 $2\pi$ 整数倍的复指数信号都是相同的。
+
+离散时间傅里叶级数（DFS）
+
+> $x(n)=\displaystyle\sum_{k=<N>}\dot A_ke^{j\frac{2\pi}{N}kn}$
+>
+> $\dot A_k^*=\dot A_{-k}$
+
+傅里叶级数的系数
+
+> $\dot A_k=\dfrac{1}{N}\displaystyle\sum_{k=<N>}x(n)e^{-j\frac{2\pi}{N}kn}$
+
+非周期信号的离散时间傅里叶变换（DTFT）
+
+> $X(e^{j\omega})=\displaystyle\sum_{n=-\infty}^{+\infty}x(n)e^{-j\omega n}$
+>
+> $x(n)=\dfrac{1}{2\pi}\int_{2\pi} X(e^{j\omega})e^{j\omega n}\mathrm d\omega$
+
+周期信号的离散时间傅里叶变换
+
+> $X(e^{j\omega})=2\pi\displaystyle\sum_{k=-\infty}^{\infty}\dot A_k\delta(\omega-\frac{2\pi}{N}k)$
+
+常用序列的离散时间傅里叶变换
+
+| 序列 $x(n)$ | 傅里叶变换 $X(e^{j\omega})$ |
+| :---------: | :------------------------: |
+| 单边指数序列 $a^nu(n),\|a\|<1$ | $\dfrac{1}{1-ae^{-j\omega}}$ |
+| 双边指数序列 $a^{\|n\|},\|a\|<1$ | $\dfrac{1}{1-ae^{-j\omega}}+\dfrac{ae^{j\omega}}{1-ae^{j\omega}}=\dfrac{1-a^2}{1-2a\cos\omega+a^2}$ |
+| $\delta(n)$ | $1$ |
+| $\text{sgn}(n)=\begin{cases}1,&n>0\\0,&n=0\\-1,&n<0\end{cases}$ | $\dfrac{-j\sin\omega}{1-\cos\omega}$ |
+| $u(n)$ | $\dfrac12[1+\text{sgn}(n)+\delta(n)]$
+
+离散时间傅里叶变换的性质
+
+| 性质 | 傅里叶变换 |
+| :--: | :--------: |
+| 周期性 | $X(e^{j\omega})=X(e^{j(\omega+2\pi)})$ |
+| 线性特性 | $ax(n)+by(n)\leftrightarrow aX(e^{j\omega})+bY(e^{j\omega})$ |
+| 共轭对称特性 | $x^*(n)\leftrightarrow X^*(e^{-j\omega})$ |
+| 时移特性 | $x(n-n_0)\leftrightarrow X(e^{j\omega})e^{-j\omega n_0}$ |
+| 频移特性 | $x(n)e^{j\omega_0n}\leftrightarrow X(e^{j(\omega-\omega_0)})$ |
+| 时域和频域的尺度变换 | $x_{(k)}(n)\leftrightarrow X(e^{jk\omega}),x(-n)\leftrightarrow X(e^{-j\omega})$ |
+| 时域差分 | $x(n)-x(n-1)\leftrightarrow (1-e^{-j\omega})X(e^{j\omega})$ |
+| 时域求和 | $\displaystyle\sum_{k=-\infty}^nx(k)\leftrightarrow \dfrac{X(e^{j\omega})}{1-e^{-j\omega}}+\pi X(e^{j0})\sum_{k=-\infty}^{\infty}\delta(\omega-2\pi k)$ |
+| 频域微分特性 | $nx(n)\leftrightarrow j\dfrac{\mathrm dX(e^{j\omega})}{\mathrm d\omega},(n+1)a^nu(n)\leftrightarrow\dfrac{1}{(1-ae^{-j\omega})^2}$ |
+| 时域卷积特性 | $x(n)*h(n)\leftrightarrow X(e^{j\omega})H(e^{j\omega})$ |
+| 帕斯瓦尔定理 | $\|X(e^{j\omega})\|^2$ 称为**能量谱密度**，$\|\dot A_k\|^2$ 称为**功率谱** |
+| 对偶性 | $X(e^{jt})\leftrightarrow x(-n)$ |
+
+线性常系数差分方程与频率响应
+
+> $n$ 阶离散 LTI 系统：$\displaystyle\sum_{k=0}^Na_ky(n-k)=\displaystyle\sum_{k=0}^Mb_kx(n-k)$
+>
+> $\displaystyle\sum_{k=0}^N a_k e^{-j\omega k}Y(e^{j\omega})=\displaystyle\sum_{k=0}^M b_k e^{-j\omega k}X(e^{j\omega})$
+>
+> $H(e^{j\omega})=\dfrac{Y(e^{j\omega})}{X(e^{j\omega})}=\dfrac{\displaystyle\sum_{k=0}^M b_k e^{-j\omega k}}{\displaystyle\sum_{k=0}^N a_k e^{-j\omega k}}$
