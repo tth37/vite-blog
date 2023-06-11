@@ -372,3 +372,67 @@ category: Course Review
 > $\displaystyle\sum_{k=0}^N a_k e^{-j\omega k}Y(e^{j\omega})=\displaystyle\sum_{k=0}^M b_k e^{-j\omega k}X(e^{j\omega})$
 >
 > $H(e^{j\omega})=\dfrac{Y(e^{j\omega})}{X(e^{j\omega})}=\dfrac{\displaystyle\sum_{k=0}^M b_k e^{-j\omega k}}{\displaystyle\sum_{k=0}^N a_k e^{-j\omega k}}$
+
+离散傅里叶变换（DFT）
+
+> $W_N=e^{-j\frac{2\pi}{N}}$
+>
+> $X(k)=\displaystyle\sum_{k=0}^{N-1}x(n)W_N^{kn}=\text{DFT}[x(n)]$
+>
+> $x(n)=\dfrac{1}{N}\displaystyle\sum_{k=0}^{N-1}X(k)W_N^{-kn}=\text{IDFT}[X(k)]$
+>
+> 对有限长序列计算 DFT 时，既可以利用定义式直接计算，也可以通过先计算信号的 DTFT，然后再对 DTFT 在 $0\sim2\pi$ 周期内等间隔采 $N$ 个样本。
+
+周期卷积与圆周卷积
+
+> 如果 $\tilde x(n)$ 与 $\tilde y(n)$ 都是以 $N$ 为周期的序列，则 $\tilde x(n)$ 与 $\tilde y(n)$ 之间的卷积为周期卷积。
+>
+> 对于两个长度均为 $N$ 的有限长序列，圆周卷积定义为：
+>
+> $f(n)=x(n)\otimes y(n)=\displaystyle\sum_{k=0}^{N-1}x(k)y((n-k))_N\cdot R_N(n)=\displaystyle\sum_{k=0}^{N-1}x((n-k))_Ny(k)\cdot R_N(n)$
+>
+> 圆周卷积的实质就是：先将两个有限长序列延拓成周期序列，并作周期卷积，然后对周期卷积的结果取主值周期。
+
+离散傅里叶变换的性质
+
+| 性质 | 傅里叶变换 |
+| :--: | :--------: |
+| 圆周移位 | $x((n-n_0))_NR_N(n)\leftrightarrow W_N^{kn_0}X(k),W_N^{-k_0n}x(n)\leftrightarrow X((k-k_0))_NR_N(k)$ |
+| 时域圆周卷积 | $x(n)\otimes y(n)\leftrightarrow X(k)Y(k)$ |
+| 频域圆周卷积 | $x(n)y(n)\leftrightarrow \dfrac{1}{N}X(k)\otimes Y(k)$ |
+
+按时间抽取的 FFT 算法（Cooley-Tukey 算法）
+
+> 首先将 $x(n)$ 按奇数位和偶数位分为两组，即
+>
+> $\begin{cases}x_1(r)=x(2r)\\x_2(r)=x(2r+1)\end{cases},r=0,1,\cdots,N/2-1$
+>
+> $\begin{aligned}X(k)&=\displaystyle\sum_{n=0}^{N-1}x(n)W_N^{kn}=\sum_{r=0}^{(N/2)-1}x(2r)W_N^{2rk}+\sum_{r=0}^{(N/2)-1}x(2r+1)W_N^{(2r+1)k}\\&=\sum_{r=0}^{(N/2)-1}x(2r)W_{N/2}^{rk}+\sum_{r=0}^{(N/2)-1}W_{N/2}^{rk}\cdot W_N^k\\&=X_1(k)+W_N^kX_2(k),0\le k\le \dfrac{N}{2}-1\end{aligned}$
+>
+> 于是我们可以将 $X(k)$ 分解成两个 $N/2$ 点 DFT 的组合。但由于 $X_1(k)$ 和 $X_2(k)$ 都只有 $N/2$ 点，因此按上式组合成的 $X(k)$ 也只是整个 $X(k)$ 的前一半。注意到
+>
+> $\begin{aligned}X(k+\dfrac N2)&=\displaystyle \sum_{n=0}^{(N/2)-1}x_1(n)W_{\frac N2}^{n(k+\frac N2)}+\sum_{n=0}^{(N/2)-1}x_2(n)W_{\frac N2}^{n(k+\frac N2)}\cdot W_N^{(k+\frac N2)}\\&=X_1(k)-W_N^kX_2(k)\end{aligned}$
+
+按频率抽取的 FFT 算法（Sand-Tukey 算法）
+
+> 如果在将序列分为两组时，按序列的前一半和后一半划分，则会得到另一种快速算法。
+>
+> $\begin{aligned}X(k)&=\displaystyle \sum_{n=0}^{N-1}x(n)W_N^{kn}=\sum_{n=0}^{(N/2)-1}x(n)W_N^{kn}+\sum_{n=(N/2)}^{N-1}x(n)W_N^{kn}\\&=\sum_{n=0}^{(N/2)-1}x(n)W_{N/2}^{kn}+\sum_{n=0}^{(N/2)-1}x(n+\frac N2)W_{N/2}^{kn}\cdot W_N^{k\frac N2}\\&=\sum_{n=0}^{(N/2)-1}\left[x(n)+(-1)^kx(n+\frac N2)\right]W_N^{kn},0\le k\le N-1\end{aligned}$
+>
+> 当 $k$ 为偶数时有
+>
+> $X(2r)=\displaystyle \sum_{n=0}^{(N/2)-1}\left[x(n)+x(n+\frac N2)\right]W_{N/2}^{rn},0\le r\le\frac N2-1$
+>
+> 当 $k$ 为奇数时有
+>
+> $X(2r+1)=\displaystyle \sum_{n=0}^{(N/2)-1}\left[x(n)-x(n+\frac N2)\right]W_{N}^{n}W_{N/2}^{rn},0\le r\le\frac N2-1$
+>
+> 如果令 $x_1(n)=x(n)+x(n+\dfrac N2),x_2(n)=\left[x(n)-x(n+\dfrac N2)\right]\cdot W_N^n$，则有
+>
+> $X(2r)=\text{DFT}[x_1(n)]$
+>
+> $X(2r+1)=\text{DFT}[x_2(n)]$
+
+IDFT 的快速算法（IFFT）
+
+> $x(n)=\dfrac1N\{\text{DFT}[X^*(k)]\}^*$
