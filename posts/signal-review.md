@@ -1,3 +1,4 @@
+#! https://zhuanlan.zhihu.com/p/636288743
 ---
 title: 信号与系统期末复习
 date: Wed Jun 07 2023 19:49:23 GMT+0800 (中国标准时间)
@@ -158,6 +159,12 @@ category: Course Review
 > $u(t)*u(t)=tu(t)$
 >
 > $e^{-t}u(t)*u(t)=(1-e^{-t})u(t)$
+>
+> > 【例题】计算 $y(n)=(\delta(n)-a\delta(n-1))*(a^nu(n))$
+> >
+> > 【答案】
+> > 
+> > $\begin{aligned}y(n)&=a^nu(n)*\delta(n)-a\cdot a^nu(n)*\delta(n-1)\\&=a^nu(n)-a\cdot a^{n-1}u(n-1)\\&=a^n(u(n)-u(n-1))\\&=a^n\delta(n)\\&=\delta(n)\end{aligned}$
 
 ## 3. 连续时间信号与系统的频域分析
 
@@ -201,9 +208,9 @@ category: Course Review
 >
 > 周期奇函数：只有 $b_n$ 项，直流和 $a_n=0$
 >
-> 奇谐函数：奇谐函数的偶次谐波的系数为 $0$，只含奇次谐波
+> 奇谐函数（满足 $f(t)=-f(t+\dfrac T2)$）：奇谐函数的偶次谐波的系数为 $0$，只含奇次谐波
 >
-> 偶谐函数：偶谐函数的奇次谐波的系数为 $0$，只含偶次谐波
+> 偶谐函数（满足 $f(t)=f(t+\dfrac T2)$）：偶谐函数的奇次谐波的系数为 $0$，只含偶次谐波
 
 非周期信号的傅里叶变换
 
@@ -247,7 +254,7 @@ category: Course Review
 | 频域微分特性 | $-jtx(t)\leftrightarrow \dfrac{\mathrm dX(j\Omega)}{\mathrm d\Omega},(-jt)^nx(t)\leftrightarrow \dfrac{\mathrm d^nX(j\Omega)}{\mathrm d\Omega^n}$ |
 | 频域积分特性 | $-\dfrac{x(t)}{jt}+\pi x(0)\delta(t)\leftrightarrow\int_{-\infty}^\Omega X(j\tau)\mathrm d\tau$ |
 | 卷积特性 | $x(t)*y(t)\leftrightarrow X(j\Omega)Y(j\Omega), x(t)y(t)\leftrightarrow \dfrac{1}{2\pi}X(j\Omega)*Y(j\Omega)$ |
-| 帕斯瓦尔定理 | $\left\|X(j\Omega)\right\|^2$ 称为**能量谱密度**，$\left\|\dot A_k\right\|^2$ 称为**功率谱** |
+| 帕斯瓦尔定理 | $\int_{-\infty}^{\infty}\|x(t)\|^2\mathrm dt=\dfrac{1}{2\pi}\int_{-\infty}^{\infty}\|X(j\Omega)\|^2\mathrm d\Omega$ |
 
 线性常系数微分方程与频率响应
 
@@ -362,7 +369,7 @@ category: Course Review
 | 时域求和 | $\displaystyle\sum_{k=-\infty}^nx(k)\leftrightarrow \dfrac{X(e^{j\omega})}{1-e^{-j\omega}}+\pi X(e^{j0})\sum_{k=-\infty}^{\infty}\delta(\omega-2\pi k)$ |
 | 频域微分特性 | $nx(n)\leftrightarrow j\dfrac{\mathrm dX(e^{j\omega})}{\mathrm d\omega},(n+1)a^nu(n)\leftrightarrow\dfrac{1}{(1-ae^{-j\omega})^2}$ |
 | 时域卷积特性 | $x(n)*h(n)\leftrightarrow X(e^{j\omega})H(e^{j\omega})$ |
-| 帕斯瓦尔定理 | $\|X(e^{j\omega})\|^2$ 称为**能量谱密度**，$\|\dot A_k\|^2$ 称为**功率谱** |
+| 帕斯瓦尔定理 | $\displaystyle\sum_{n=-\infty}^{\infty}\|x(n)\|^2=\dfrac{1}{2\pi}\int_{2\pi}\|X(e^{j\omega})\|^2\mathrm d\omega$ |
 | 对偶性 | $X(e^{jt})\leftrightarrow x(-n)$ |
 
 线性常系数差分方程与频率响应
