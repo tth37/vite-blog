@@ -1,4 +1,3 @@
-#! https://zhuanlan.zhihu.com/p/636288743
 ---
 title: 信号与系统期末复习
 date: Wed Jun 07 2023 19:49:23 GMT+0800 (中国标准时间)
@@ -255,6 +254,7 @@ category: Course Review
 | 频域积分特性 | $-\dfrac{x(t)}{jt}+\pi x(0)\delta(t)\leftrightarrow\int_{-\infty}^\Omega X(j\tau)\mathrm d\tau$ |
 | 卷积特性 | $x(t)*y(t)\leftrightarrow X(j\Omega)Y(j\Omega), x(t)y(t)\leftrightarrow \dfrac{1}{2\pi}X(j\Omega)*Y(j\Omega)$ |
 | 帕斯瓦尔定理 | $\int_{-\infty}^{\infty}\|x(t)\|^2\mathrm dt=\dfrac{1}{2\pi}\int_{-\infty}^{\infty}\|X(j\Omega)\|^2\mathrm d\Omega$ |
+| 实信号的奇、偶分解 | $x_e(t)=\dfrac12(x(t)+x(-t))\leftrightarrow \Re[X(j\Omega)]$<br>$x_o(t)=\dfrac12(x(t)-x(-t))\leftrightarrow j\Im[X(j\Omega)]$ |
 
 线性常系数微分方程与频率响应
 
@@ -371,6 +371,7 @@ category: Course Review
 | 时域卷积特性 | $x(n)*h(n)\leftrightarrow X(e^{j\omega})H(e^{j\omega})$ |
 | 帕斯瓦尔定理 | $\displaystyle\sum_{n=-\infty}^{\infty}\|x(n)\|^2=\dfrac{1}{2\pi}\int_{2\pi}\|X(e^{j\omega})\|^2\mathrm d\omega$ |
 | 对偶性 | $X(e^{jt})\leftrightarrow x(-n)$ |
+| 实信号的奇、偶分解 | $x_e(n)=\dfrac12[x(n)+x(-n)]\leftrightarrow \Re[X(e^{j\omega})]$<br>$x_o(n)=\dfrac12[x(n)-x(-n)]\leftrightarrow j\Im[X(e^{j\omega})]$ |
 
 线性常系数差分方程与频率响应
 
