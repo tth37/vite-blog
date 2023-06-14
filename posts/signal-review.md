@@ -51,9 +51,9 @@ category: Course Review
 
 > $\delta(n)=\begin{cases}0,&n\neq0\\1,&n=0\end{cases}$
 >
-> $x(n)\delta(n)=x(0)\delta(n)$
+> <font color='red'>$x(n)\delta(n)=x(0)\delta(n)$</font>
 >
-> $x(n)\delta(n-m)=x(m)\delta(n-m)$
+> <font color='red'>$x(n)\delta(n-m)=x(m)\delta(n-m)$</font>
 
 单位冲激信号
 
@@ -61,13 +61,13 @@ category: Course Review
 >
 > $\begin{cases}\delta(t)=0,&t\neq0\\\int_{-\infty}^{+\infty}\delta(t)dt=1\end{cases}$
 >
-> $x(t)\delta(t)=x(0)\delta(t)$
+> <font color='red'>$x(t)\delta(t)=x(0)\delta(t)$</font>
 >
-> $x(t)\delta(t-t_0)=x(t_0)\delta(t-t_0)$
+> <font color='red'>$x(t)\delta(t-t_0)=x(t_0)\delta(t-t_0)$</font>
 
 系统的性质
 
-> 因果性：如果一个系统在任何时刻的输出都只取决于当时的输入以及以前的输入，而不取决于将来的输入，则该系统就称为**因果系统**。例如，$y(n)=x(n)+x(n-1)$ 是因果系统，而 $y(n)=x(n)-x(n+1)$ 是非因果系统。
+> <font color='red'>因果性：如果一个系统在任何时刻的输出都只取决于当时的输入以及以前的输入，而不取决于将来的输入，则该系统就称为**因果系统**。例如，$y(n)=x(n)+x(n-1)$ 是因果系统，而 $y(n)=x(n)-x(n+1)$ 是非因果系统。
 >
 > 时不变性：如果系统的输入信号在时间上发生一个时移，相应的输出信号也仅仅在时间上产生一个同样的时移，除此之外没有任何其他改变，则称该系统为**时不变系统**。
 >
@@ -79,7 +79,7 @@ category: Course Review
 >
 > 所谓齐次性是指，若系统的输入乘以任意常数，则系统的输出也乘以相同的常数，即
 >
-> 若 $x(t)\rightarrow y(t)$，则 $kx(t)\rightarrow ky(t)$。
+> 若 $x(t)\rightarrow y(t)$，则 $kx(t)\rightarrow ky(t)$。</font>
 
 ## 2. 信号与系统的时域分析
 
@@ -93,7 +93,7 @@ category: Course Review
 
 卷积和的定义
 
-> $\displaystyle x(n)*h(n)=\sum_{k=-\infty}^{+\infty}x(k)h(n-k)$
+> <font color='red'>$\displaystyle x(n)*h(n)=\sum_{k=-\infty}^{+\infty}x(k)h(n-k)$</font>
 
 卷积和的性质
 
@@ -105,9 +105,9 @@ category: Course Review
 >
 > 时移性质：$x(n-n_0)*h(n)=x(n)*h(n-n_0)=y(n-n_0)$
 >
-> $x(n)*\delta(n)=x(n)$
+> <font color='red'>$x(n)*\delta(n)=x(n)$
 >
-> $x(n-n_1)*\delta(n-n_2)=x(n-n_1-n_2)$
+> $x(n-n_1)*\delta(n-n_2)=x(n-n_1-n_2)$</font>
 >
 > $x(n)*u(n)\displaystyle=\sum_{k=-\infty}^{n}x(k)$
 
@@ -117,13 +117,13 @@ category: Course Review
 >
 > $y(n)=-ay(n-1)+b_0x(n)+b_1x(n-1)$
 >
-> $\begin{cases}w(n)=b_0x(n)+b_1x(n-1)\\y(n)=-ay(n-1)+w(n)\end{cases}$
+> <font color='red'>$\begin{cases}w(n)=b_0x(n)+b_1x(n-1)\\y(n)=-ay(n-1)+w(n)\end{cases}$</font>
 
 ![](https://tth37.top/assets/fig1.png)
 
 卷积的定义
 
-> $f_1(t)*f_2(t)=\int_{-\infty}^{+\infty}f_1(\tau)f_2(t-\tau)d\tau$
+> <font color='red'>$f_1(t)*f_2(t)=\int_{-\infty}^{+\infty}f_1(\tau)f_2(t-\tau)d\tau$</font>
 
 卷积的性质
 
@@ -135,15 +135,15 @@ category: Course Review
 >
 > 时移性质：$f(t-t_1)*v(t-t_2)=y(t-t_1-t_2)$
 >
-> $x(t)*\delta(t)=x(t)$
+> <font color='red'>$x(t)*\delta(t)=x(t)$
 >
-> $x(t-t_0)*\delta(t-t_1)=x(t-t_0-t_1)$
+> $x(t-t_0)*\delta(t-t_1)=x(t-t_0-t_1)$</font>
 
 卷积的微分与积分
 
-> 微分：$\displaystyle\frac{\mathrm d}{\mathrm dt}\left[f(t)*v(t)\right]=\frac{\mathrm df(t)}{\mathrm dt}*v(t)=f(t)*\frac{\mathrm dv(t)}{\mathrm dt}$
+> <font color='red'>微分：$\displaystyle\frac{\mathrm d}{\mathrm dt}\left[f(t)*v(t)\right]=\frac{\mathrm df(t)}{\mathrm dt}*v(t)=f(t)*\frac{\mathrm dv(t)}{\mathrm dt}$
 >
-> 积分：$\int_{-\infty}^t\left[f(\tau)*v(\tau)\right]d\tau=f(t)*\left[\int_{-\infty}^tv(\tau)d\tau\right]=\left[\int_{-\infty}^tf(\tau)d\tau\right]*v(t)$
+> 积分：$\int_{-\infty}^t\left[f(\tau)*v(\tau)\right]d\tau=f(t)*\left[\int_{-\infty}^tv(\tau)d\tau\right]=\left[\int_{-\infty}^tf(\tau)d\tau\right]*v(t)$</font>
 
 常用函数的卷积
 
@@ -175,13 +175,13 @@ category: Course Review
 
 指数形式的傅里叶级数
 
-> $\displaystyle x(t)=\sum_{k=-\infty}^{+\infty}\dot A_ke^{jk\Omega_0t}$
+> <font color='red'>$\displaystyle x(t)=\sum_{k=-\infty}^{+\infty}\dot A_ke^{jk\Omega_0t}$</font>
 >
 > $\dot A_k=\dot A_{-k}^*$
 
 傅里叶级数的系数
 
-> $\dot A_k=\dfrac{1}{T_0}\displaystyle\int_{T_0}x(t)e^{-jk\Omega_0t}dt$
+> <font color='red'>$\dot A_k=\dfrac{1}{T_0}\displaystyle\int_{T_0}x(t)e^{-jk\Omega_0t}dt$</font>
 
 三角函数形式的傅里叶级数
 
@@ -203,64 +203,64 @@ category: Course Review
 
 周期函数奇偶性与谐波分量的关系
 
-> 周期偶函数：只有直流和 $a_n$ 项，$b_n=0$
+> <font color='red'>周期偶函数：只有直流和 $a_n$ 项，$b_n=0$
 >
 > 周期奇函数：只有 $b_n$ 项，直流和 $a_n=0$
 >
 > 奇谐函数（满足 $f(t)=-f(t+\dfrac T2)$）：奇谐函数的偶次谐波的系数为 $0$，只含奇次谐波
 >
-> 偶谐函数（满足 $f(t)=f(t+\dfrac T2)$）：偶谐函数的奇次谐波的系数为 $0$，只含偶次谐波
+> 偶谐函数（满足 $f(t)=f(t+\dfrac T2)$）：偶谐函数的奇次谐波的系数为 $0$，只含偶次谐波</font>
 
 非周期信号的傅里叶变换
 
-> $X(j\Omega)=\int_{-\infty}^{+\infty}x(t)e^{-j\Omega t}\mathrm dt$
+> <font color='red'>$X(j\Omega)=\int_{-\infty}^{+\infty}x(t)e^{-j\Omega t}\mathrm dt$
 >
-> $x(t)=\dfrac{1}{2\pi}\int_{-\infty}^{+\infty}X(j\Omega)e^{j\Omega t}\mathrm d\Omega$
+> $x(t)=\dfrac{1}{2\pi}\int_{-\infty}^{+\infty}X(j\Omega)e^{j\Omega t}\mathrm d\Omega$</font>
 
 周期信号的傅里叶变换
 
 > $e^{j\Omega_0t}\leftrightarrow 2\pi\delta(\Omega-\Omega_0)$
 >
-> $x(t)\leftrightarrow 2\pi\displaystyle\sum_{k=-\infty}^{+\infty}\dot A_k\delta(\Omega-k\Omega_0)$
+> <font color='red'>$x(t)\leftrightarrow 2\pi\displaystyle\sum_{k=-\infty}^{+\infty}\dot A_k\delta(\Omega-k\Omega_0)$</font>
 
 常用信号的傅里叶变换对
 
 | 信号 $x(t)$ | 傅里叶变换 $X(j\Omega)$ |
 | :---------: | :---------------------: |
-| $e^{-at}u(t),a>0$ | $\dfrac{1}{a+j\Omega}$ |
+| <font color='red'>$e^{-at}u(t),a>0$</font> | <font color='red'>$\dfrac{1}{a+j\Omega}$</font> |
 | $e^{-a\|t\|},a>0$ | $\dfrac{2a}{a^2+\Omega^2}$ |
-| $1$ | $2\pi\delta(\Omega)$ |
-| $\delta(t)$ | $1$ |
-| $u(t)$ | $\dfrac{1}{j\Omega}+\pi\delta(\Omega)$ |
-| $\begin{cases}1,&\|t\|\leq \tau/2\\0,&\|t\|>\tau/2\end{cases}$ | $\dfrac{2\sin\left(\Omega\tau/2\right)}{\Omega}$ |
+| <font color='red'>$1$ | <font color='red'>$2\pi\delta(\Omega)$ |
+| <font color='red'>$\delta(t)$ | <font color='red'>$1$ |
+| <font color='red'>$u(t)$ | <font color='red'>$\dfrac{1}{j\Omega}+\pi\delta(\Omega)$ |
+| <font color='red'>$\begin{cases}1,&\|t\|\leq \tau/2\\0,&\|t\|>\tau/2\end{cases}$ | <font color='red'>$\dfrac{2\sin\left(\Omega\tau/2\right)}{\Omega}$ |
 | $\text{sgn}(t)=u(t)-u(-t)$ | $\dfrac{2}{j\Omega}$ |
-| $e^{j\Omega_0t}$ | $2\pi\delta(\Omega-\Omega_0)$ |
-| $\begin{cases}1,&0\leq \|t\|\leq \tau/2\\0,&\tau/2<\|t\|\leq T_0/2 \end{cases}$ | $\displaystyle\sum_{k=-\infty}^{+\infty}\dfrac{2\sin(k\Omega_0\tau/2)}{k}\delta(\Omega-k\Omega_0)$ |
-| $te^{-at}u(t),\text{Re}(a)>0$ | $\dfrac{1}{(a+j\Omega)^2}$ |
+| <font color='red'>$e^{j\Omega_0t}$ | <font color='red'>$2\pi\delta(\Omega-\Omega_0)$ |
+| <font color='red'>$\begin{cases}1,&0\leq \|t\|\leq \tau/2\\0,&\tau/2<\|t\|\leq T_0/2 \end{cases}$ | <font color='red'>$\displaystyle\sum_{k=-\infty}^{+\infty}\dfrac{2\sin(k\Omega_0\tau/2)}{k}\delta(\Omega-k\Omega_0)$ |
+| <font color='red'>$te^{-at}u(t),\text{Re}(a)>0$ | <font color='red'>$\dfrac{1}{(a+j\Omega)^2}$ |
 
 傅里叶变换的基本性质
 
 | 性质 | 傅里叶变换 |
 | :--: | :--------: |
 | 线性特性 | $ax(t)+by(t)\leftrightarrow aX(j\Omega)+bY(j\Omega)$ |
-| 延时特性 | $x(t-t_0)\leftrightarrow X(j\Omega)e^{-j\Omega t_0}$ |
-| 移频特性 | $x(t)e^{j\Omega_0t}\leftrightarrow X(j(\Omega-\Omega_0))$ |
-| 尺度变换特性 | $x(at)\leftrightarrow \dfrac{1}{\|a\|}X\left(\dfrac{j\Omega}{a}\right)$ |
+| <font color='red'>延时特性 | <font color='red'>$x(t-t_0)\leftrightarrow X(j\Omega)e^{-j\Omega t_0}$ |
+| <font color='red'>移频特性 | <font color='red'>$x(t)e^{j\Omega_0t}\leftrightarrow X(j(\Omega-\Omega_0))$ |
+| <font color='red'>尺度变换特性 | <font color='red'>$x(at)\leftrightarrow \dfrac{1}{\|a\|}X\left(\dfrac{j\Omega}{a}\right)$ |
 | 共轭对称特性 | $X^*(j\Omega)=X(-j\Omega)$ |
-| 对偶特性 | $X(jt)\leftrightarrow 2\pi x(-\Omega)$ |
-| 时域微分特性 | $\dfrac{\mathrm dx(t)}{\mathrm dt}\leftrightarrow j\Omega X(j\Omega),\dfrac{\mathrm d^nx(t)}{\mathrm dt^n}\leftrightarrow (j\Omega)^nX(j\Omega)$ |
+| <font color='red'>对偶特性 | <font color='red'>$X(jt)\leftrightarrow 2\pi x(-\Omega)$ |
+| <font color='red'>时域微分特性 | <font color='red'>$\dfrac{\mathrm dx(t)}{\mathrm dt}\leftrightarrow j\Omega X(j\Omega),\dfrac{\mathrm d^nx(t)}{\mathrm dt^n}\leftrightarrow (j\Omega)^nX(j\Omega)$ |
 | 时域积分特性 | $\int_{-\infty}^tx(\tau)\mathrm d\tau\leftrightarrow \dfrac{1}{j\Omega}X(j\Omega)+\pi X(0)\delta(\Omega)$ |
 | 频域微分特性 | $-jtx(t)\leftrightarrow \dfrac{\mathrm dX(j\Omega)}{\mathrm d\Omega},(-jt)^nx(t)\leftrightarrow \dfrac{\mathrm d^nX(j\Omega)}{\mathrm d\Omega^n}$ |
 | 频域积分特性 | $-\dfrac{x(t)}{jt}+\pi x(0)\delta(t)\leftrightarrow\int_{-\infty}^\Omega X(j\tau)\mathrm d\tau$ |
-| 卷积特性 | $x(t)*y(t)\leftrightarrow X(j\Omega)Y(j\Omega), x(t)y(t)\leftrightarrow \dfrac{1}{2\pi}X(j\Omega)*Y(j\Omega)$ |
-| 帕斯瓦尔定理 | $\int_{-\infty}^{\infty}\|x(t)\|^2\mathrm dt=\dfrac{1}{2\pi}\int_{-\infty}^{\infty}\|X(j\Omega)\|^2\mathrm d\Omega$ |
-| 实信号的奇、偶分解 | $x_e(t)=\dfrac12(x(t)+x(-t))\leftrightarrow \Re[X(j\Omega)]$<br>$x_o(t)=\dfrac12(x(t)-x(-t))\leftrightarrow j\Im[X(j\Omega)]$ |
+| <font color='red'>卷积特性 | <font color='red'>$x(t)*y(t)\leftrightarrow X(j\Omega)Y(j\Omega), x(t)y(t)\leftrightarrow \dfrac{1}{2\pi}X(j\Omega)*Y(j\Omega)$ |
+| <font color='red'>帕斯瓦尔定理 | <font color='red'>$\int_{-\infty}^{\infty}\|x(t)\|^2\mathrm dt=\dfrac{1}{2\pi}\int_{-\infty}^{\infty}\|X(j\Omega)\|^2\mathrm d\Omega$ |
+| <font color='red'>实信号的奇、偶分解 | <font color='red'>$x_e(t)=\dfrac12(x(t)+x(-t))\leftrightarrow \Re[X(j\Omega)]$<br>$x_o(t)=\dfrac12(x(t)-x(-t))\leftrightarrow j\Im[X(j\Omega)]$ |
 
 线性常系数微分方程与频率响应
 
 > $n$ 阶 LTI 连续系统：$\displaystyle\sum_{k=0}^N\frac{\mathrm d^ky(t)}{\mathrm dt^k}=\displaystyle\sum_{k=0}^M\frac{\mathrm d^kx(t)}{\mathrm dt^k}$
 >
-> 根据傅里叶变换的时域微分特性：$\displaystyle\sum_{k=0}^Na_k(j\Omega)^kY(j\Omega)=\displaystyle\sum_{k=0}^Mb_k(j\Omega)^kX(j\Omega)$
+> <font color='red'>根据傅里叶变换的时域微分特性：$\displaystyle\sum_{k=0}^Na_k(j\Omega)^kY(j\Omega)=\displaystyle\sum_{k=0}^Mb_k(j\Omega)^kX(j\Omega)$</font>
 >
 > $H(j\Omega)=\dfrac{Y(j\Omega)}{X(j\Omega)}=\dfrac{\displaystyle\sum_{k=0}^Mb_k(j\Omega)^k}{\displaystyle\sum_{k=0}^Na_k(j\Omega)^k}$
 
@@ -299,7 +299,7 @@ category: Course Review
 >
 > 利用卷积特性，$x_s(t)=x(t)\delta_T(t)\leftrightarrow \dfrac{1}{2\pi}X(j\Omega)*\Omega_s\delta_{\Omega_s}(\Omega)$
 >
-> 特点：理想抽样后的频谱，是将连续信号的频谱进行**周期延拓**，延拓的周期是**抽样频率**，频谱幅度乘以 **$\dfrac1T$**
+> <font color='red'>特点：理想抽样后的频谱，是将连续信号的频谱进行**周期延拓**，延拓的周期是**抽样频率**，频谱幅度乘以 **$\dfrac1T$**</font>
 
 信号的时域内插恢复
 
@@ -307,15 +307,15 @@ category: Course Review
 >
 > 要从连续时间信号的离散样本恢复连续信号必须满足三个条件：
 >
-> 1. 连续信号要带限与 $\Omega_m$
-> 2. 采样频率 $\Omega_s\ge 2\Omega_m$
-> 3. $\Omega_m\le\Omega_c\le(\Omega_s-\Omega_m)$
+> 1. <font color='red'>连续信号要带限与 $\Omega_m$</font>
+> 2. <font color='red'>采样频率 $\Omega_s\ge 2\Omega_m$</font>
+> 3. <font color='red'>$\Omega_m\le\Omega_c\le(\Omega_s-\Omega_m)$</font>
 >
 > 不满足条件 1 和 2 时产生**频谱混叠**现象（欠采样）
 
 奈奎斯特抽样定理（香农抽样定理）
 
-> 设 $x(t)$ 带限与 $\Omega_m$。如果抽样频率 $\Omega_s\ge2\Omega_m$，其中 $\Omega_s=\dfrac{2\pi}T$，那么 $x(t)$ 就唯一地由其样本 $x_s(t)$ 所确定。
+> <font color='red'>设 $x(t)$ 带限与 $\Omega_m$。如果抽样频率 $\Omega_s\ge2\Omega_m$，其中 $\Omega_s=\dfrac{2\pi}T$，那么 $x(t)$ 就唯一地由其样本 $x_s(t)$ 所确定。</font>
 
 ## 4. 离散时间信号与系统的频域分析
 
@@ -327,32 +327,32 @@ category: Course Review
 
 离散时间傅里叶级数（DFS）
 
-> $x(n)=\displaystyle\sum_{k=<N>}\dot A_ke^{j\frac{2\pi}{N}kn}$
+> <font color='red'>$x(n)=\displaystyle\sum_{k=<N>}\dot A_ke^{j\frac{2\pi}{N}kn}$</font>
 >
 > $\dot A_k^*=\dot A_{-k}$
 
 傅里叶级数的系数
 
-> $\dot A_k=\dfrac{1}{N}\displaystyle\sum_{k=<N>}x(n)e^{-j\frac{2\pi}{N}kn}$
+> <font color='red'>$\dot A_k=\dfrac{1}{N}\displaystyle\sum_{k=<N>}x(n)e^{-j\frac{2\pi}{N}kn}$</font>
 
 非周期信号的离散时间傅里叶变换（DTFT）
 
-> $X(e^{j\omega})=\displaystyle\sum_{n=-\infty}^{+\infty}x(n)e^{-j\omega n}$
+> <font color='red'>$X(e^{j\omega})=\displaystyle\sum_{n=-\infty}^{+\infty}x(n)e^{-j\omega n}$
 >
-> $x(n)=\dfrac{1}{2\pi}\int_{2\pi} X(e^{j\omega})e^{j\omega n}\mathrm d\omega$
+> $x(n)=\dfrac{1}{2\pi}\int_{2\pi} X(e^{j\omega})e^{j\omega n}\mathrm d\omega$</font>
 
 周期信号的离散时间傅里叶变换
 
-> $X(e^{j\omega})=2\pi\displaystyle\sum_{k=-\infty}^{\infty}\dot A_k\delta(\omega-\frac{2\pi}{N}k)$
+> <font color='red'>$X(e^{j\omega})=2\pi\displaystyle\sum_{k=-\infty}^{\infty}\dot A_k\delta(\omega-\frac{2\pi}{N}k)$</font>
 
 常用序列的离散时间傅里叶变换
 
 | 序列 $x(n)$ | 傅里叶变换 $X(e^{j\omega})$ |
 | :---------: | :------------------------: |
-| 单边指数序列 $a^nu(n),\|a\|<1$ | $\dfrac{1}{1-ae^{-j\omega}}$ |
+| <font color='red'>单边指数序列 $a^nu(n),\|a\|<1$ | <font color='red'>$\dfrac{1}{1-ae^{-j\omega}}$ |
 | 双边指数序列 $a^{\|n\|},\|a\|<1$ | $\dfrac{1}{1-ae^{-j\omega}}+\dfrac{ae^{j\omega}}{1-ae^{j\omega}}=\dfrac{1-a^2}{1-2a\cos\omega+a^2}$ |
-| $\delta(n)$ | $1$ |
-| $\delta(n-n_0)$ | $e^{-j\omega n_0}$ |
+| <font color='red'>$\delta(n)$ | <font color='red'>$1$ |
+| <font color='red'>$\delta(n-n_0)$ | <font color='red'>$e^{-j\omega n_0}$ |
 | $\text{sgn}(n)=\begin{cases}1,&n>0\\0,&n=0\\-1,&n<0\end{cases}$ | $\dfrac{-j\sin\omega}{1-\cos\omega}$ |
 | $u(n)$ | $\dfrac12[1+\text{sgn}(n)+\delta(n)]$
 
@@ -363,22 +363,22 @@ category: Course Review
 | 周期性 | $X(e^{j\omega})=X(e^{j(\omega+2\pi)})$ |
 | 线性特性 | $ax(n)+by(n)\leftrightarrow aX(e^{j\omega})+bY(e^{j\omega})$ |
 | 共轭对称特性 | $x^*(n)\leftrightarrow X^*(e^{-j\omega})$ |
-| 时移特性 | $x(n-n_0)\leftrightarrow X(e^{j\omega})e^{-j\omega n_0}$ |
-| 频移特性 | $x(n)e^{j\omega_0n}\leftrightarrow X(e^{j(\omega-\omega_0)})$ |
+| <font color='red'>时移特性 | <font color='red'>$x(n-n_0)\leftrightarrow X(e^{j\omega})e^{-j\omega n_0}$ |
+| <font color='red'>频移特性 | <font color='red'>$x(n)e^{j\omega_0n}\leftrightarrow X(e^{j(\omega-\omega_0)})$ |
 | 时域和频域的尺度变换 | $x_{(k)}(n)\leftrightarrow X(e^{jk\omega}),x(-n)\leftrightarrow X(e^{-j\omega})$ |
 | 时域差分 | $x(n)-x(n-1)\leftrightarrow (1-e^{-j\omega})X(e^{j\omega})$ |
 | 时域求和 | $\displaystyle\sum_{k=-\infty}^nx(k)\leftrightarrow \dfrac{X(e^{j\omega})}{1-e^{-j\omega}}+\pi X(e^{j0})\sum_{k=-\infty}^{\infty}\delta(\omega-2\pi k)$ |
-| 频域微分特性 | $nx(n)\leftrightarrow j\dfrac{\mathrm dX(e^{j\omega})}{\mathrm d\omega},(n+1)a^nu(n)\leftrightarrow\dfrac{1}{(1-ae^{-j\omega})^2}$ |
-| 时域卷积特性 | $x(n)*h(n)\leftrightarrow X(e^{j\omega})H(e^{j\omega})$ |
-| 帕斯瓦尔定理 | $\displaystyle\sum_{n=-\infty}^{\infty}\|x(n)\|^2=\dfrac{1}{2\pi}\int_{2\pi}\|X(e^{j\omega})\|^2\mathrm d\omega$ |
-| 对偶性 | $X(e^{jt})\leftrightarrow x(-n)$ |
-| 实信号的奇、偶分解 | $x_e(n)=\dfrac12[x(n)+x(-n)]\leftrightarrow \Re[X(e^{j\omega})]$<br>$x_o(n)=\dfrac12[x(n)-x(-n)]\leftrightarrow j\Im[X(e^{j\omega})]$ |
+| <font color='red'>频域微分特性 | <font color='red'>$nx(n)\leftrightarrow j\dfrac{\mathrm dX(e^{j\omega})}{\mathrm d\omega},(n+1)a^nu(n)\leftrightarrow\dfrac{1}{(1-ae^{-j\omega})^2}$ |
+| <font color='red'>时域卷积特性 | <font color='red'>$x(n)*h(n)\leftrightarrow X(e^{j\omega})H(e^{j\omega})$ |
+| <font color='red'>帕斯瓦尔定理 | <font color='red'>$\displaystyle\sum_{n=-\infty}^{\infty}\|x(n)\|^2=\dfrac{1}{2\pi}\int_{2\pi}\|X(e^{j\omega})\|^2\mathrm d\omega$ |
+| <font color='red'>对偶性 | <font color='red'>$X(e^{jt})\leftrightarrow x(-n)$ |
+| <font color='red'>实信号的奇、偶分解 | <font color='red'>$x_e(n)=\dfrac12[x(n)+x(-n)]\leftrightarrow \Re[X(e^{j\omega})]$<br>$x_o(n)=\dfrac12[x(n)-x(-n)]\leftrightarrow j\Im[X(e^{j\omega})]$ |
 
 线性常系数差分方程与频率响应
 
 > $n$ 阶离散 LTI 系统：$\displaystyle\sum_{k=0}^Na_ky(n-k)=\displaystyle\sum_{k=0}^Mb_kx(n-k)$
 >
-> $\displaystyle\sum_{k=0}^N a_k e^{-j\omega k}Y(e^{j\omega})=\displaystyle\sum_{k=0}^M b_k e^{-j\omega k}X(e^{j\omega})$
+> <font color='red'>$\displaystyle\sum_{k=0}^N a_k e^{-j\omega k}Y(e^{j\omega})=\displaystyle\sum_{k=0}^M b_k e^{-j\omega k}X(e^{j\omega})$</font>
 >
 > $H(e^{j\omega})=\dfrac{Y(e^{j\omega})}{X(e^{j\omega})}=\dfrac{\displaystyle\sum_{k=0}^M b_k e^{-j\omega k}}{\displaystyle\sum_{k=0}^N a_k e^{-j\omega k}}$
 
@@ -386,11 +386,11 @@ category: Course Review
 
 离散傅里叶变换（DFT）
 
-> $W_N=e^{-j\frac{2\pi}{N}}$
+> <font color='red'>$W_N=e^{-j\frac{2\pi}{N}}$
 >
 > $X(k)=\displaystyle\sum_{k=0}^{N-1}x(n)W_N^{kn}=\text{DFT}[x(n)]$
 >
-> $x(n)=\dfrac{1}{N}\displaystyle\sum_{n=0}^{N-1}X(k)W_N^{-kn}=\text{IDFT}[X(k)]$
+> $x(n)=\dfrac{1}{N}\displaystyle\sum_{n=0}^{N-1}X(k)W_N^{-kn}=\text{IDFT}[X(k)]$</font>
 >
 > 对有限长序列计算 DFT 时，既可以利用定义式直接计算，也可以通过先计算信号的 DTFT，然后再对 DTFT 在 $0\sim2\pi$ 周期内等间隔采 $N$ 个样本。
 
@@ -400,7 +400,7 @@ category: Course Review
 >
 > 对于两个长度均为 $N$ 的有限长序列，圆周卷积定义为：
 >
-> $f(n)=x(n)\otimes y(n)=\displaystyle\sum_{k=0}^{N-1}x(k)y((n-k))_N\cdot R_N(n)=\displaystyle\sum_{k=0}^{N-1}x((n-k))_Ny(k)\cdot R_N(n)$
+> <font color='red'>$f(n)=x(n)\otimes y(n)=\displaystyle\sum_{k=0}^{N-1}x(k)y((n-k))_N\cdot R_N(n)=\displaystyle\sum_{k=0}^{N-1}x((n-k))_Ny(k)\cdot R_N(n)$</font>
 >
 > 圆周卷积的实质就是：先将两个有限长序列延拓成周期序列，并作周期卷积，然后对周期卷积的结果取主值周期。
 
@@ -414,7 +414,7 @@ category: Course Review
 
 按时间抽取的 FFT 算法（Cooley-Tukey 算法）
 
-> 首先将 $x(n)$ 按奇数位和偶数位分为两组，即
+> <font color='red'>首先将 $x(n)$ 按奇数位和偶数位分为两组，即
 >
 > $\begin{cases}x_1(r)=x(2r)\\x_2(r)=x(2r+1)\end{cases},r=0,1,\cdots,N/2-1$
 >
@@ -422,11 +422,11 @@ category: Course Review
 >
 > 于是我们可以将 $X(k)$ 分解成两个 $N/2$ 点 DFT 的组合。但由于 $X_1(k)$ 和 $X_2(k)$ 都只有 $N/2$ 点，因此按上式组合成的 $X(k)$ 也只是整个 $X(k)$ 的前一半。注意到
 >
-> $\begin{aligned}X(k+\dfrac N2)&=\displaystyle \sum_{n=0}^{(N/2)-1}x_1(n)W_{\frac N2}^{n(k+\frac N2)}+\sum_{n=0}^{(N/2)-1}x_2(n)W_{\frac N2}^{n(k+\frac N2)}\cdot W_N^{(k+\frac N2)}\\&=X_1(k)-W_N^kX_2(k)\end{aligned}$
+> $\begin{aligned}X(k+\dfrac N2)&=\displaystyle \sum_{n=0}^{(N/2)-1}x_1(n)W_{\frac N2}^{n(k+\frac N2)}+\sum_{n=0}^{(N/2)-1}x_2(n)W_{\frac N2}^{n(k+\frac N2)}\cdot W_N^{(k+\frac N2)}\\&=X_1(k)-W_N^kX_2(k)\end{aligned}$</font>
 
 按频率抽取的 FFT 算法（Sand-Tukey 算法）
 
-> 如果在将序列分为两组时，按序列的前一半和后一半划分，则会得到另一种快速算法。
+> <font color='red'>如果在将序列分为两组时，按序列的前一半和后一半划分，则会得到另一种快速算法。
 >
 > $\begin{aligned}X(k)&=\displaystyle \sum_{n=0}^{N-1}x(n)W_N^{kn}=\sum_{n=0}^{(N/2)-1}x(n)W_N^{kn}+\sum_{n=(N/2)}^{N-1}x(n)W_N^{kn}\\&=\sum_{n=0}^{(N/2)-1}x(n)W_{N/2}^{kn}+\sum_{n=0}^{(N/2)-1}x(n+\frac N2)W_{N/2}^{kn}\cdot W_N^{k\frac N2}\\&=\sum_{n=0}^{(N/2)-1}\left[x(n)+(-1)^kx(n+\frac N2)\right]W_N^{kn},0\le k\le N-1\end{aligned}$
 >
@@ -442,7 +442,7 @@ category: Course Review
 >
 > $X(2r)=\text{DFT}[x_1(n)]$
 >
-> $X(2r+1)=\text{DFT}[x_2(n)]$
+> $X(2r+1)=\text{DFT}[x_2(n)]$</font>
 
 IDFT 的快速算法（IFFT）
 
@@ -452,13 +452,13 @@ IDFT 的快速算法（IFFT）
 
 $z$ 变换的定义
 
-> 单位脉冲响应为 $h(n)$ 的离散时间 LTI 系统，对复指数信号 $z^n$ 的输出响应 $y(n)$ 为 $y(n)=H(z)z^n$，其中 $H(z)=\displaystyle\sum_{n=-\infty}^{\infty}h(n)z^{-n}$。
+> 单位脉冲响应为 $h(n)$ 的离散时间 LTI 系统，对复指数信号 $z^n$ 的输出响应 $y(n)$ 为 $y(n)=H(z)z^n$，其中 <font color='red'>$H(z)=\displaystyle\sum_{n=-\infty}^{\infty}h(n)z^{-n}$</font>。
 
 $z$ 变换与离散时间傅里叶变换（DTFT）的关系
 
 > $X(e^{j\omega})=X(z)\Large|_{z=e^{j\omega}}$
 >
-> 离散时间傅里叶变换是**单位圆上的 $z$ 变换**
+> <font color='red'>离散时间傅里叶变换是**单位圆上的 $z$ 变换**</font>
 
 $z$ 变换与离散傅里叶变换（DFT）的关系
 
@@ -468,63 +468,71 @@ $z$ 变换与离散傅里叶变换（DFT）的关系
 
 $z$ 变换的收敛域
 
-> 使 $X(z)$ 存在且有限的 $z$ 的取值范围，称为 $X(z)$ 的收敛域。级数的和存在且有限，$X(z)$ 就收敛。
+> <font color='red'>使 $X(z)$ 存在且有限的 $z$ 的取值范围，称为 $X(z)$ 的收敛域。级数的和存在且有限，$X(z)$ 就收敛。</font>
 >
 > $z$ 变换收敛域的特征：
 >
-> 1. 收敛域是 $z$ 平面内以原点为中心的圆环，收敛域内不含极点
+> 1. <font color='red'>收敛域是 $z$ 平面内以原点为中心的圆环，收敛域内不含极点</font>
 > 2. 有限长序列的收敛域为除 $z=0$ 和 $|z|=\infty$ 外的整个 $z$ 平面
-> 3. 右边序列（因果序列）的收敛域位于最外部极点的外部
-> 4. 左边序列（反因果序列）的收敛域位于最内部极点的内部
+> 3. <font color='red'>右边序列（因果序列）的收敛域位于最外部极点的外部</font>
+> 4. <font color='red'>左边序列（反因果序列）的收敛域位于最内部极点的内部</font>
 > 5. 双边序列的收敛域为一环形区域
 
 常用序列的 $z$ 变换
 
 | 序列 | $z$ 变换 | 收敛域 |
 | :--: | :------: | :----: |
-| $\delta(n)$ | $1$ | 整个 $z$ 平面 |
+| <font color='red'>$\delta(n)$ | <font color='red'>$1$ | <font color='red'>整个 $z$ 平面 |
 | $u(n)$ | $\dfrac{z}{z-1}$ | $\|z\|>1$ |
 | $-u(-n-1)$ | $\dfrac{z}{z-1}$ | $\|z\|<1$ |
 | $\delta(n-m)$ | $\dfrac1{z^m}$ | 除去 $z=0(m>0)$ 或 $z=\infty(m<0)$ 的全部 $z$ |
-| $a^nu(n)$ | $\dfrac{z}{z-a}$ | $\|z\|>\|a\|$ |
-| $-a^nu(-n-1)$ | $\dfrac{z}{z-a}$ | $\|z\|<\|a\|$ |
+| <font color='red'>$a^nu(n)$ | <font color='red'>$\dfrac{z}{z-a}$ | <font color='red'>$\|z\|>\|a\|$ |
+| <font color='red'>$-a^nu(-n-1)$ | <font color='red'>$\dfrac{z}{z-a}$ | <font color='red'>$\|z\|<\|a\|$ |
 
 双边 $z$ 变换的性质
 
 | 性质 | $z$ 变换 | 收敛域 |
 | :--: | :------: | :----: |
-| 时移特性 | $x(n-n_0)\leftrightarrow z^{-n_0}X(z)$ | 收敛域在原点或无穷远处可能发生变化 |
+| <font color='red'>时移特性 | <font color='red'>$x(n-n_0)\leftrightarrow z^{-n_0}X(z)$ | <font color='red'>收敛域在原点或无穷远处可能发生变化 |
 | 线性特性 | $ax(n)+by(n)\leftrightarrow aX(z)+bY(z)$ | 一般情况下是各个信号收敛域的公共部分，若在相加过程中出现零极点相抵消的现象，收敛域可能有所扩大 |
 | 时域反转特性 | $x(-n)\leftrightarrow X(z^{-1})$ | $\dfrac1b<\|z\|<\dfrac1a$ |
-| 卷积定理 | $x(n)*y(n)\leftrightarrow X(z)Y(z)$ | 两个信号收敛域的公共部分 |
+| <font color='red'>卷积定理 | <font color='red'>$x(n)*y(n)\leftrightarrow X(z)Y(z)$ | <font color='red'>两个信号收敛域的公共部分 |
 | $z$ 域微分特性 | $nx(n)\leftrightarrow -z\dfrac{\mathrm dX(z)}{\mathrm dz}$ | 收敛域不变 |
 | 时域求和性质 | $\displaystyle\sum_{k=-\infty}^nx(k)\leftrightarrow \dfrac{z}{z-1}X(z)$ | $R\cap \|z\|>1$ |
-| 初值定理 | $x(0)=\displaystyle\lim_{z\to\infty}X(z),x(n)=\displaystyle\lim_{z\to\infty}z^n\left[X(z)-\displaystyle\sum_{k=0}^{n-1}x(k)z^{-k}\right]$ | / |
-| 终值定理 | $x(\infty)=\displaystyle\lim_{z\to1}(z-1)X(z)$ | / |
+| <font color='red'>初值定理 | <font color='red'>$x(0)=\displaystyle\lim_{z\to\infty}X(z),x(n)=\displaystyle\lim_{z\to\infty}z^n\left[X(z)-\displaystyle\sum_{k=0}^{n-1}x(k)z^{-k}\right]$ | / |
+| <font color='red'>终值定理 | <font color='red'>$x(\infty)=\displaystyle\lim_{z\to1}(z-1)X(z)$ | / |
 
 $z$ 反变换
 
 > $z$ 反变换的计算方法：
 >
 > 1. 幂级数展开法
-> 2. 部分分式展开法：将 $\dfrac{X(z)}z$ 展开
+> 2. <font color='red'>部分分式展开法：将 $\dfrac{X(z)}z$ 展开</font>
 
 系统函数的极点分布与系统的特性
 
-> 因果系统：收敛域为最外边极点的外边
-> 稳定系统：收敛域一定包含单位圆
+> <font color='red'>因果系统：收敛域为最外边极点的外边</font>
+> 
+> <font color='red'>稳定系统：收敛域一定包含单位圆</font>
+> 
 > 因果且稳定系统：全部极点一定在 $z$ 平面单位圆内
 
 单边 $z$ 变换
 
-> $X(z)=\displaystyle\sum_{n=0}^{\infty}x(n)z^{-n}$
+> <font color='red'>单边 $z$ 变换常用来分析增量线性系统（即初始条件不为零的线性常系数差分方程所描述的系统）</font>
+>
+> 时间信号 $x(n)$ 的单边 $z$ 变换被定义为 <font color='red'>$X(z)=\displaystyle\sum_{n=0}^{\infty}x(n)z^{-n}$</font>
 >
 > 右边（因果）序列，单边 $z$ 变换与双边 $z$ 变换相同
 >
 > 双边 $z$ 变换的移位性质：$x(n-n_0)\leftrightarrow z^{-n_0}X(z)$
 >
-> 单边 $z$ 变换的移位性质
+> <font color='red'>单边 $z$ 变换的移位性质：
 >
-> 1. 右移：$x(n-n_0)\leftrightarrow z^{-n_0}X(z)+z^{-n_0}\displaystyle\sum_{n=-n_0}^{-1}x(n)z^{-n},n_0>0$
-> 2. 左移：$x(n-n_0)\leftrightarrow z^{n_0}X(z)-z^{n_0}\displaystyle\sum_{n=0}^{n_0-1}x(n)z^{-n},n_0>0$
-
+> $x(n)\leftrightarrow X(z)$
+>
+> $x(n-1)\leftrightarrow z^{-1}X(z)+x(-1)$
+>
+> $x(n-2)\leftrightarrow z^{-2}X(z)+z^{-1}x(-1)+x(-2)$
+>
+> $x(n-n_0)\leftrightarrow z^{-n_0}X(z)+z^{-n_0}\displaystyle\sum_{n=-n_0}^{-1}x(n)z^{-n}$</font>
