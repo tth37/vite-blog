@@ -352,6 +352,7 @@ category: Course Review
 | 单边指数序列 $a^nu(n),\|a\|<1$ | $\dfrac{1}{1-ae^{-j\omega}}$ |
 | 双边指数序列 $a^{\|n\|},\|a\|<1$ | $\dfrac{1}{1-ae^{-j\omega}}+\dfrac{ae^{j\omega}}{1-ae^{j\omega}}=\dfrac{1-a^2}{1-2a\cos\omega+a^2}$ |
 | $\delta(n)$ | $1$ |
+| $\delta(n-n_0)$ | $e^{-j\omega n_0}$ |
 | $\text{sgn}(n)=\begin{cases}1,&n>0\\0,&n=0\\-1,&n<0\end{cases}$ | $\dfrac{-j\sin\omega}{1-\cos\omega}$ |
 | $u(n)$ | $\dfrac12[1+\text{sgn}(n)+\delta(n)]$
 
