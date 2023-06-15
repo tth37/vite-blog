@@ -488,6 +488,8 @@ $z$ 变换的收敛域
 | $\delta(n-m)$ | $\dfrac1{z^m}$ | 除去 $z=0(m>0)$ 或 $z=\infty(m<0)$ 的全部 $z$ |
 | <font color='red'>$a^nu(n)$ | <font color='red'>$\dfrac{z}{z-a}$ | <font color='red'>$\|z\|>\|a\|$ |
 | <font color='red'>$-a^nu(-n-1)$ | <font color='red'>$\dfrac{z}{z-a}$ | <font color='red'>$\|z\|<\|a\|$ |
+| $na^nu(n)$ | $\dfrac{az}{(z-a)^2}$ | $\|z\|>\|a\|$ |
+| $-na^nu(-n-1)$ | $\dfrac{az}{(z-a)^2}$ | $\|z\|<\|a\|$ |
 
 双边 $z$ 变换的性质
 
