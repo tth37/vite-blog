@@ -388,9 +388,9 @@ category: Course Review
 
 > <font color='red'>$W_N=e^{-j\frac{2\pi}{N}}$
 >
-> $X(k)=\displaystyle\sum_{k=0}^{N-1}x(n)W_N^{kn}=\text{DFT}[x(n)]$
+> $X(k)=\displaystyle\sum_{n=0}^{N-1}x(n)W_N^{kn}=\text{DFT}[x(n)]$
 >
-> $x(n)=\dfrac{1}{N}\displaystyle\sum_{n=0}^{N-1}X(k)W_N^{-kn}=\text{IDFT}[X(k)]$</font>
+> $x(n)=\dfrac{1}{N}\displaystyle\sum_{k=0}^{N-1}X(k)W_N^{-kn}=\text{IDFT}[X(k)]$</font>
 >
 > 对有限长序列计算 DFT 时，既可以利用定义式直接计算，也可以通过先计算信号的 DTFT，然后再对 DTFT 在 $0\sim2\pi$ 周期内等间隔采 $N$ 个样本。
 
