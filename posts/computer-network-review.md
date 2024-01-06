@@ -549,18 +549,88 @@ Web 缓存
 
 <font color="red">报文格式</font>
 
+> ![](/assets/net-fig20.png)
+
 <font color="red">工作原理</font>
+
+> 序号、确认号
+> - 序号：报文段首字节在字节流的编号
+> - 确认号：期望从另一方收到的下一个字节的序号，累计确认
+>
+> 往返延时 RTT 和超时
+> - $\text{EstimatedRTT}=(1-\alpha)\text{EstimatedRTT}+\alpha\text{SampleRTT}$（指数加权移动平均）
+> - $\text{DevRTT}=(1-\beta)\text{DevRTT}+\beta|\text{SampleRTT}-\text{EstimatedRTT}|$
+> - $\text{TimeoutInterval}=\text{EstimatedRTT}+4\text{DevRTT}$
+>
+> 可靠传输机制
+> - 从应用层接收数据，创建并发送报文段（不考虑流量控制、拥塞控制），如果定时器没有运行，则启动定时器
+> - 超时：重传后沿最老的报文段，重启定时器
+> - 收到确认：如果是对尚未确认的报文段的确认，则更新已被确认的报文段序号；如果还有未被确认的报文段，重启定时器
+>
+> ```
+> NextSeqNum = InitialSeqNumber
+> SendBase = InitialSeqNumber
+>
+> loop (永远) {
+>   switch(事件)
+>     事件：从上面应用程序接收到数据 e
+>       if (定时器没有运行)
+>         启动定时器
+>       向 IP 传送报文段
+>       NextSeqNum = NextSeqNum + length(data)
+>       break;
+>
+>     事件：定时器超时
+>       重传具有最小序号但仍未应答的报文段
+>       启动定时器
+>       break;
+>
+>     事件：收到 ACK，具有 ACK 字段值 y
+>       if (y > SendBase) {
+>         SendBase = y
+>         if (还有未被确认的报文段)
+>           启动定时器
+>       }
+>       break;
+> }
+> ```
+>
+> 快速重传
+> - 超时周期往往太长，通过重复的 ACK 来检测报文段丢失：发送方通常连续发送大量报文段，如果报文段丢失，通常会引起多个重复的 ACK
+> - 如果发送方收到同一数据的 3 个冗余 ACK，则重传具有最小序号的段（在定时器超时之前）
 
 <font color="red">流量控制</font>
 
+> 接收方控制发送方，不让发送方发送的太多、太快以至于让接收方的缓冲区溢出
+>
+> 接收方在其向发送方的 TCP 段头部的 rwnd 字段“通告”其空闲缓冲区大小，发送方限制未确认字节的个数小于等于接收方发送过来的 rwnd 值，保证接收方不会被淹没
+
 <font color="red">连接建立（三次握手）</font>
 
+> ![](/assets/net-fig21.png)
+
 <font color="red">连接释放（四次挥手）</font>
+
+> ![](/assets/net-fig22.png)
 
 ### 拥塞控制
 
 拥塞原因与代价
 
+> 原因：太多数据被发送到网络中，网络来不及处理
+>
+> 代价：较大的排队时延、重传丢弃的分组
+
 <font color="red">拥塞控制方法（端到端、网络辅助）</font>
 
+> 端到端拥塞控制：通过对网络行为的观察（如分组丢失和时延）来推断用色的发生
+>
+> 网络辅助拥塞控制：网络层设备件（路由器）向发送方提供关于网络中拥塞状态的显式反馈信息
+
 <font color="red">TCP 拥塞控制</font>
+
+> 拥塞控制和流量控制联合动作：发送端控制*发送但是未确认的量*同时满足拥塞控制和流量控制要求
+>
+> 慢启动、拥塞避免、快速恢复
+>
+> ![](/assets/net-fig23.png)
