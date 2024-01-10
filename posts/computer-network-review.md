@@ -123,7 +123,7 @@ category: Course Review
 
 <font color="red">网络体系结构定义</font>
 
-> TBD.
+> 定义和描述一组用于计算机及其通信设施之间互连的标准和规范的集合，遵循这组规范可以很方便地实现计算机设备之间的通信
 
 <font color="red">OSI 体系结构模型</font>
 
