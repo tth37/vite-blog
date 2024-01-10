@@ -328,7 +328,7 @@ Web 缓存
 
 > DNS 是运行在 **UDP** 之上端口号为 **53** 的应用服务，提供了主机名 - IP 地址的转换功能。
 
-<font color="red">DNS提供的服务</font>
+DNS提供的服务
 
 > 主机别名到规范名字的转换（host aliasing）
 >
